@@ -381,6 +381,26 @@ section:last-of-type {
     max-width: 100%;
 }
 
+.semesters-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.semester-section {
+    margin-bottom: 2rem;
+}
+
+.semester-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #F50707;
+}
+
 .course-category {
     margin-bottom: 3rem;
 }
@@ -694,6 +714,10 @@ section:last-of-type {
     .bio {
         text-align: left;
         flex: 1;
+    }
+    .semesters-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     .container {
         padding: 0 15px;
