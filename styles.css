@@ -234,8 +234,8 @@ section:last-of-type {
 .profile-image {
     flex-shrink: 0;
     width: auto;
-    max-width: 250px;
-    min-width: 180px;
+    max-width: 300px;
+    min-width: 220px;
 }
 
 .profile-img {
