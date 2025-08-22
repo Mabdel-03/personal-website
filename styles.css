@@ -226,15 +226,16 @@ section:last-of-type {
 /* About Section */
 
 .profile-section {
-    display: grid;
-    grid-template-columns: 200px 1fr;
+    display: flex;
     gap: 2rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    flex-shrink: 0;
+    width: auto;
+    max-width: 250px;
+    min-width: 180px;
 }
 
 .profile-img {
@@ -683,7 +684,7 @@ section:last-of-type {
         font-size: 2rem;
     }
     .profile-section {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 1.5rem;
         text-align: center;
     }
@@ -692,6 +693,7 @@ section:last-of-type {
     }
     .bio {
         text-align: left;
+        flex: 1;
     }
     .container {
         padding: 0 15px;
