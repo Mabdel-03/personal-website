@@ -6,6 +6,24 @@
     box-sizing: border-box;
 }
 
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 10001;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    color: #000;
+    border: 2px solid #F50707;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -135,6 +153,9 @@ a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .bar {
@@ -171,6 +192,13 @@ a:hover {
     font-weight: 400;
 }
 
+.bio-line {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
 .affiliation {
     font-size: 1rem;
     color: #000;
@@ -184,7 +212,7 @@ a:hover {
 
 .separator {
     margin: 0 0.5rem;
-    color: #ccc;
+    color: #666;
 }
 
 
@@ -266,6 +294,26 @@ section:last-of-type {
 
 
 /* Research Section */
+
+.research-thrust {
+    margin-bottom: 2.5rem;
+}
+
+.research-thrust:last-child {
+    margin-bottom: 0;
+}
+
+.research-thrust h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.research-thrust p {
+    color: #000;
+    line-height: 1.7;
+}
 
 .research-areas {
     margin-bottom: 3rem;
@@ -374,6 +422,24 @@ section:last-of-type {
     font-size: 0.9rem;
 }
 
+.publication-list h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.publication-list h3:first-child {
+    margin-top: 0;
+}
+
+.pub-empty {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
 
 /* Coursework Section */
 
@@ -444,6 +510,28 @@ section:last-of-type {
     font-size: 0.9rem;
 }
 
+.older-coursework {
+    margin-top: 2rem;
+}
+
+.older-coursework summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: #000;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 1.5rem;
+    list-style-position: outside;
+}
+
+.older-coursework summary:hover {
+    color: #F50707;
+}
+
+.older-coursework[open] summary {
+    color: #F50707;
+}
+
 
 /* Teaching Section */
 
@@ -487,6 +575,27 @@ section:last-of-type {
 }
 
 .teaching-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.teaching-list li {
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.teaching-list li:before {
+    content: "\2022";
+    color: #F50707;
+    position: absolute;
+    left: 0;
+}
+
+.teaching-list li:last-child {
     margin-bottom: 0;
 }
 
@@ -703,20 +812,20 @@ section:last-of-type {
 
 /* Responsive Design */
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .nav-container {
         max-width: 100%;
         padding: 0 15px;
     }
     .nav-menu {
-        gap: 1.2rem;
+        gap: 1rem;
     }
     .nav-link {
         font-size: 0.9rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-menu {
         position: fixed;
         left: -100%;

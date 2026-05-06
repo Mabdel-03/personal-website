@@ -1,11 +1,24 @@
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
+
 // Mobile Navigation Toggle
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
+
+const setMenuExpanded = (expanded) => {
+    if (mobileMenu) {
+        mobileMenu.setAttribute('aria-expanded', String(expanded));
+    }
+};
 
 if (mobileMenu && navMenu) {
     mobileMenu.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
         navMenu.classList.toggle('active');
+        setMenuExpanded(navMenu.classList.contains('active'));
     });
 
     // Close mobile menu when clicking on nav links
@@ -13,6 +26,7 @@ if (mobileMenu && navMenu) {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             navMenu.classList.remove('active');
+            setMenuExpanded(false);
         });
     });
 }
@@ -55,6 +69,7 @@ document.addEventListener('click', (e) => {
         if (!e.target.closest('.nav-container')) {
             mobileMenu.classList.remove('active');
             navMenu.classList.remove('active');
+            setMenuExpanded(false);
         }
     }
 });
@@ -64,6 +79,7 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu && navMenu) {
         mobileMenu.classList.remove('active');
         navMenu.classList.remove('active');
+        setMenuExpanded(false);
     }
 });
 
