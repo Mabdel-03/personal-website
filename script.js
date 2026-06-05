@@ -1,224 +1,215 @@
-// Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
 }
 
-// Mobile Navigation Toggle
 const mobileMenu = document.getElementById('mobile-menu');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.getElementById('primary-nav');
+const navLinks = Array.from(document.querySelectorAll('.nav-link'));
 
 const setMenuExpanded = (expanded) => {
-    if (mobileMenu) {
-        mobileMenu.setAttribute('aria-expanded', String(expanded));
+    if (!mobileMenu || !navMenu) {
+        return;
     }
+
+    mobileMenu.classList.toggle('active', expanded);
+    navMenu.classList.toggle('active', expanded);
+    document.body.classList.toggle('menu-open', expanded);
+    mobileMenu.setAttribute('aria-expanded', String(expanded));
 };
 
 if (mobileMenu && navMenu) {
     mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        setMenuExpanded(navMenu.classList.contains('active'));
+        setMenuExpanded(!navMenu.classList.contains('active'));
     });
 
-    // Close mobile menu when clicking on nav links
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-            setMenuExpanded(false);
-        });
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => setMenuExpanded(false));
     });
-}
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.offsetTop;
-            const offsetPosition = elementPosition - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 1px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
-    }
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (mobileMenu && navMenu) {
-        if (!e.target.closest('.nav-container')) {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-container')) {
             setMenuExpanded(false);
         }
-    }
-});
+    });
 
-// Keyboard navigation support
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu && navMenu) {
-        mobileMenu.classList.remove('active');
-        navMenu.classList.remove('active');
-        setMenuExpanded(false);
-    }
-});
-
-// Simple fade-in animation for sections on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            setMenuExpanded(false);
         }
     });
-}, observerOptions);
-
-// Add subtle fade-in animation to sections
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section:not(.hero)');
-
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
-});
-
-// Copy email to clipboard functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const emailElements = document.querySelectorAll('.email');
-
-    emailElements.forEach(email => {
-        email.style.cursor = 'pointer';
-        email.title = 'Click to copy email address';
-
-        email.addEventListener('click', () => {
-            const emailText = email.textContent;
-
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(emailText).then(() => {
-                    showNotification('Email copied to clipboard');
-                }).catch(() => {
-                    fallbackCopyTextToClipboard(emailText);
-                });
-            } else {
-                fallbackCopyTextToClipboard(emailText);
-            }
-        });
-    });
-});
-
-// Fallback for copying text to clipboard
-function fallbackCopyTextToClipboard(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.top = '0';
-    textArea.style.left = '0';
-    textArea.style.position = 'fixed';
-    textArea.style.opacity = '0';
-
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-        document.execCommand('copy');
-        showNotification('Email copied to clipboard');
-    } catch (err) {
-        console.error('Unable to copy to clipboard', err);
-    }
-
-    document.body.removeChild(textArea);
 }
 
-// Simple notification system
-function showNotification(message, duration = 3000) {
-    // Remove existing notification
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+        const targetId = anchor.getAttribute('href');
+        const target = targetId ? document.querySelector(targetId) : null;
 
-    // Create notification
-    const notification = document.createElement('div');
-    notification.className = 'notification';
-    notification.textContent = message;
+        if (!target) {
+            return;
+        }
 
-    // Style notification
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #F50707;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 4px;
-        font-size: 14px;
-        z-index: 10000;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-    `;
+        event.preventDefault();
+        const headerOffset = 84;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
 
-    document.body.appendChild(notification);
-
-    // Animate in
-    setTimeout(() => {
-        notification.style.opacity = '1';
-        notification.style.transform = 'translateY(0)';
-    }, 100);
-
-    // Remove after duration
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateY(-10px)';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.remove();
-            }
-        }, 300);
-    }, duration);
-}
-
-// Handle focus for accessibility
-document.addEventListener('DOMContentLoaded', () => {
-    const focusableElements = document.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
-
-    focusableElements.forEach(element => {
-        element.addEventListener('focus', () => {
-            element.style.outline = '2px solid #F50707';
-            element.style.outlineOffset = '2px';
-        });
-
-        element.addEventListener('blur', () => {
-            element.style.outline = '';
-            element.style.outlineOffset = '';
+        window.scrollTo({
+            top: Math.max(targetTop, 0),
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
         });
     });
 });
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const activeLink = navLinks.find((link) => link.getAttribute('href') === `#${entry.target.id}`);
+
+        if (entry.isIntersecting && activeLink) {
+            navLinks.forEach((link) => link.classList.remove('active'));
+            activeLink.classList.add('active');
+        }
+    });
+}, {
+    rootMargin: '-35% 0px -55% 0px',
+    threshold: 0
+});
+
+document.querySelectorAll('main section[id]').forEach((section) => {
+    sectionObserver.observe(section);
+});
+
+const canvas = document.getElementById('neural-field');
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (canvas) {
+    const context = canvas.getContext('2d', { alpha: true });
+    const pointer = { x: null, y: null };
+    let nodes = [];
+    let animationId = null;
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+
+    const randomBetween = (min, max) => Math.random() * (max - min) + min;
+
+    const createNodes = () => {
+        const area = width * height;
+        const count = Math.min(86, Math.max(38, Math.floor(area / 24000)));
+
+        nodes = Array.from({ length: count }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: randomBetween(-0.12, 0.12),
+            vy: randomBetween(-0.1, 0.1),
+            radius: randomBetween(0.8, 1.8)
+        }));
+    };
+
+    const resizeCanvas = () => {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        context.setTransform(dpr, 0, 0, dpr, 0, 0);
+        createNodes();
+    };
+
+    const updateNodes = () => {
+        nodes.forEach((node) => {
+            node.x += node.vx;
+            node.y += node.vy;
+
+            if (node.x < -20) node.x = width + 20;
+            if (node.x > width + 20) node.x = -20;
+            if (node.y < -20) node.y = height + 20;
+            if (node.y > height + 20) node.y = -20;
+
+            if (pointer.x !== null && pointer.y !== null) {
+                const dx = pointer.x - node.x;
+                const dy = pointer.y - node.y;
+                const distance = Math.hypot(dx, dy);
+
+                if (distance < 150 && distance > 0) {
+                    node.x -= (dx / distance) * 0.08;
+                    node.y -= (dy / distance) * 0.08;
+                }
+            }
+        });
+    };
+
+    const draw = () => {
+        context.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < nodes.length; i += 1) {
+            for (let j = i + 1; j < nodes.length; j += 1) {
+                const a = nodes[i];
+                const b = nodes[j];
+                const distance = Math.hypot(a.x - b.x, a.y - b.y);
+                const maxDistance = 145;
+
+                if (distance < maxDistance) {
+                    const alpha = (1 - distance / maxDistance) * 0.16;
+                    context.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+                    context.lineWidth = 0.65;
+                    context.beginPath();
+                    context.moveTo(a.x, a.y);
+                    context.lineTo(b.x, b.y);
+                    context.stroke();
+                }
+            }
+        }
+
+        nodes.forEach((node) => {
+            context.fillStyle = 'rgba(255, 255, 255, 0.38)';
+            context.beginPath();
+            context.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+            context.fill();
+        });
+    };
+
+    const animate = () => {
+        updateNodes();
+        draw();
+        animationId = window.requestAnimationFrame(animate);
+    };
+
+    const start = () => {
+        if (animationId) {
+            window.cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+
+        draw();
+
+        if (!reducedMotionQuery.matches) {
+            animationId = window.requestAnimationFrame(animate);
+        }
+    };
+
+    resizeCanvas();
+    start();
+
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+        start();
+    });
+
+    window.addEventListener('pointermove', (event) => {
+        pointer.x = event.clientX;
+        pointer.y = event.clientY;
+    });
+
+    window.addEventListener('pointerleave', () => {
+        pointer.x = null;
+        pointer.y = null;
+    });
+
+    if (typeof reducedMotionQuery.addEventListener === 'function') {
+        reducedMotionQuery.addEventListener('change', start);
+    } else if (typeof reducedMotionQuery.addListener === 'function') {
+        reducedMotionQuery.addListener(start);
+    }
+}

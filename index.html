@@ -4,28 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmoud Abdelmoneum &mdash; MIT | Computational Neuroscience &amp; ML</title>
-    <meta name="description" content="Undergraduate researcher at MIT working on computational neuroscience and machine learning for the life sciences.">
+    <title>Mahmoud Abdelmoneum | MIT MEng | AI &amp; Neuroscience</title>
+    <meta name="description" content="Mahmoud Abdelmoneum is an MIT Master of Engineering student studying Computer Science and Neuroscience, with interests in AI for science, computational neuroscience, and neuroscience-inspired AI.">
     <link rel="canonical" href="https://mabdel-03.github.io/personal-website/">
 
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Mahmoud Abdelmoneum &mdash; MIT | Computational Neuroscience &amp; ML">
-    <meta property="og:description" content="Undergraduate researcher at MIT working on computational neuroscience and machine learning for the life sciences.">
+    <meta property="og:title" content="Mahmoud Abdelmoneum | MIT MEng | AI &amp; Neuroscience">
+    <meta property="og:description" content="MIT Master of Engineering student studying Computer Science and Neuroscience, interested in AI for science and neuroscience-inspired AI.">
     <meta property="og:url" content="https://mabdel-03.github.io/personal-website/">
     <meta property="og:image" content="https://mabdel-03.github.io/personal-website/profile-photo.jpg">
     <meta property="og:image:alt" content="Portrait of Mahmoud Abdelmoneum">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mahmoud Abdelmoneum &mdash; MIT | Computational Neuroscience &amp; ML">
-    <meta name="twitter:description" content="Undergraduate researcher at MIT working on computational neuroscience and machine learning for the life sciences.">
+    <meta name="twitter:title" content="Mahmoud Abdelmoneum | MIT MEng | AI &amp; Neuroscience">
+    <meta name="twitter:description" content="MIT Master of Engineering student studying Computer Science and Neuroscience, interested in AI for science and neuroscience-inspired AI.">
     <meta name="twitter:image" content="https://mabdel-03.github.io/personal-website/profile-photo.jpg">
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='-apple-system,Segoe UI,Inter,sans-serif' font-size='42' font-weight='700' fill='%23F50707'%3EM%3C/text%3E%3C/svg%3E">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -35,19 +31,21 @@
       "url": "https://mabdel-03.github.io/personal-website/",
       "image": "https://mabdel-03.github.io/personal-website/profile-photo.jpg",
       "email": "mailto:mabdel03@mit.edu",
-      "jobTitle": "Undergraduate Researcher",
+      "jobTitle": "Master of Engineering Student and Researcher",
       "affiliation": {
         "@type": "CollegeOrUniversity",
         "name": "Massachusetts Institute of Technology",
         "url": "https://www.mit.edu/"
       },
       "knowsAbout": [
+        "Artificial intelligence",
+        "Biological intelligence",
         "Computational neuroscience",
-        "Machine learning",
+        "Machine learning for science",
+        "Neuroscience-inspired artificial intelligence",
         "Deep learning",
-        "Statistical signal processing",
-        "Drug discovery",
-        "Consciousness"
+        "Biological signal processing",
+        "Personalized medicine"
       ],
       "sameAs": [
         "https://github.com/Mabdel-03",
@@ -59,36 +57,19 @@
 </head>
 
 <body>
+    <canvas class="neural-field" id="neural-field" aria-hidden="true"></canvas>
     <a class="skip-link" href="#about">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Mahmoud Abdelmoneum</a>
-            </div>
+            <a class="nav-logo" href="#home" aria-label="Mahmoud Abdelmoneum home">M.A.</a>
             <ul class="nav-menu" id="primary-nav">
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#publications" class="nav-link">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#research" class="nav-link">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#coursework" class="nav-link">Coursework</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#teaching" class="nav-link">Teaching</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#current-endeavors" class="nav-link">Notes</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#coursework" class="nav-link">Coursework</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav" type="button">
                 <span class="bar"></span>
@@ -98,425 +79,218 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="name">Mahmoud Abdelmoneum</h1>
-                <p class="title">Undergraduate Researcher</p>
-                <p class="bio-line">Computational neuroscience and machine learning for the life sciences.</p>
-                <p class="affiliation">BS candidate, MIT &mdash; Computer Science &amp; Neuroscience (6-9), Chemical Biology (5-7)</p>
-                <div class="contact-info">
-                    <span class="email">mabdel03@mit.edu</span>
-                    <span class="separator">|</span>
-                    <a href="https://drive.google.com/file/d/1wP1GTiiMdcDNB0h-v924xeZlx3aXhNKO/view?usp=sharing" class="link" target="_blank" rel="noopener">CV</a>
-                    <span class="separator">|</span>
-                    <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/" class="link" target="_blank" rel="noopener">LinkedIn</a>
-                    <span class="separator">|</span>
-                    <a href="https://github.com/Mabdel-03" class="link" target="_blank" rel="noopener">GitHub</a>
-                    <span class="separator">|</span>
-                    <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912" class="link" target="_blank" rel="noopener">Scholar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="profile-photo.jpg" alt="Portrait of Mahmoud Abdelmoneum" class="profile-img" width="1000" height="1000" loading="lazy" decoding="async">
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">MIT EECS + Brain and Cognitive Sciences</p>
+                    <h1>Mahmoud Abdelmoneum</h1>
+                    <p class="hero-lede">
+                        Master of Engineering student studying Computer Science and Neuroscience, exploring intelligence across machine learning, the brain, and the sciences.
+                    </p>
+                    <p class="hero-summary">
+                        I am interested in AI systems that accelerate neuroscience and biology, and in neuroscientific ideas that can help us build better artificial intelligence.
+                    </p>
+                    <div class="hero-actions" aria-label="Primary links">
+                        <a href="mailto:mabdel03@mit.edu">Email</a>
+                        <a href="https://drive.google.com/file/d/1wP1GTiiMdcDNB0h-v924xeZlx3aXhNKO/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+                        <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912" target="_blank" rel="noopener">Scholar</a>
                     </div>
-                    <div class="bio">
+                </div>
+                <aside class="hero-panel" aria-label="Research focus">
+                    <p class="panel-kicker">Current focus</p>
+                    <ul class="focus-list">
+                        <li>AI for neuroscience and scientific discovery</li>
+                        <li>Computational models of neural and cognitive systems</li>
+                        <li>Biological intelligence as a guide for better AI</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container split-section">
+                <div class="section-heading">
+                    <p class="section-label">About</p>
+                    <h2>At the boundary of artificial and biological intelligence.</h2>
+                </div>
+                <div class="about-body">
+                    <figure class="portrait-frame">
+                        <img src="profile-photo.jpg" alt="Portrait of Mahmoud Abdelmoneum" width="1000" height="1000" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="copy-stack">
                         <p>
-                            I am an undergraduate student and researcher at MIT broadly interested in AI/ML, particularly in applications of AI/ML in the life sciences. My work focuses on the intersection of computer science, neuroscience, chemistry, and biology.
+                            I am an MIT Master of Engineering student studying Computer Science and Neuroscience. My academic path sits between EECS, Brain and Cognitive Sciences, chemistry, and biology, with a broad interest in how intelligent systems can be understood and engineered.
                         </p>
                         <p>
-                            I am studying Computer Science and Neuroscience (6-9) and Chemical-Biology (5-7) with a concentration in History (21H). My research explores computational approaches to understanding complex biological and cognitive systems.
+                            I think about intelligence in both directions: how AI can help us ask sharper questions about neural and biological systems, and how neuroscience can suggest new principles for robust, adaptive, and useful AI.
                         </p>
                         <p>
-                            I am broadly interested in consciousness, including the neurobiological basis of consciousness as well as artificially replicating it. I currently conduct research leveraging computational tools to understand how different environmental conditions
-                            affect the brain, but my research interests include statistical and deep learning methods for signal processing (with applications in neuroscience and biology), and deep learning for personalized medicine and drug discovery.
+                            My interests include computational neuroscience, statistical and deep learning methods for biological signal processing, AI for personalized medicine and drug discovery, and the scientific study of cognition and consciousness.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="section-content">
-                <div class="publication-list">
-                    <h3>Manuscripts in Preparation</h3>
-                    <div class="publication">
-                        <div class="pub-title"><span class="pub-link">[Working title &mdash; replace before deploy]</span></div>
-                        <p class="pub-authors"><strong>Abdelmoneum, M.</strong>, Coauthor A., Coauthor B.</p>
-                        <p class="pub-venue">In preparation</p>
-                    </div>
-
-                    <h3>Posters &amp; Abstracts</h3>
-                    <p class="pub-empty">[Add poster/abstract entries &mdash; e.g. UROP poster session, conference abstracts.]</p>
-
-                    <h3>Selected Coursework Projects</h3>
-                    <p class="pub-empty">[Add 1&ndash;3 strong final projects from grad classes &mdash; link to writeup or repo.]</p>
+        <section id="research" class="research">
+            <div class="container split-section">
+                <div class="section-heading">
+                    <p class="section-label">Research</p>
+                    <h2>Questions I keep returning to.</h2>
+                </div>
+                <div class="research-grid">
+                    <article class="research-card">
+                        <span class="card-index">01</span>
+                        <h3>AI for neuroscience and biology</h3>
+                        <p>
+                            Building and applying computational tools that make complex biological and neural data more interpretable, predictive, and useful for scientific discovery.
+                        </p>
+                    </article>
+                    <article class="research-card">
+                        <span class="card-index">02</span>
+                        <h3>Learning from neural systems</h3>
+                        <p>
+                            Studying how ideas from perception, cognition, neural dynamics, and biological adaptation can inform the design of more capable AI systems.
+                        </p>
+                    </article>
+                    <article class="research-card">
+                        <span class="card-index">03</span>
+                        <h3>Signals, structure, and inference</h3>
+                        <p>
+                            Exploring statistical and deep learning approaches for extracting structure from noisy biological time series, neural recordings, and other high-dimensional signals.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research</h2>
-            <div class="section-content">
-                <div class="research-thrust">
-                    <h3>Computational neuroscience of environment &amp; cognition</h3>
-                    <p>I'm investigating how environmental conditions shape neural dynamics, using computational tools to characterize population activity and behavior. <!-- TODO: name the lab/PI and one specific question you're working on. --></p>
+        <section id="work" class="work">
+            <div class="container split-section">
+                <div class="section-heading">
+                    <p class="section-label">Selected work</p>
+                    <h2>Research threads and academic projects.</h2>
                 </div>
-
-                <div class="research-thrust">
-                    <h3>Statistical &amp; deep learning for biological signal processing</h3>
-                    <p>I'm interested in models that recover structure from noisy biological time series &mdash; neural recordings, biosignals, and beyond &mdash; using methods at the intersection of statistics and modern deep learning. <!-- TODO: list 1&ndash;2 concrete projects or methods you've worked with. --></p>
-                </div>
-
-                <div class="research-thrust">
-                    <h3>Deep learning for personalized medicine and drug discovery</h3>
-                    <p>I want to understand how representation-learning approaches can drive individualized therapeutics and small-molecule discovery, with the long-term goal of building AI systems whose abilities mirror those of the human mind. <!-- TODO: link a project, repo, or course paper. --></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coursework Section -->
-    <section id="coursework" class="coursework">
-        <div class="container">
-            <h2 class="section-title">Coursework</h2>
-            <div class="section-content">
-                <div class="coursework-content">
-                    <div class="semesters-grid">
-                        <div class="semester-section">
-                            <h3>Fall 2025 (tentative)</h3>
-                            <div class="course-list">
-                                <div class="course-item">
-                                    <h4>9.66: Computational Cognitive Science</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>9.17: Systems Neuroscience Laboratory</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.S890: Topics in Multiagent Learning (Grad)</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>18.1002: Real Analysis (Grad)</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.7910: Statistical Learning Theory (Grad)</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>5.611: Introduction to Spectroscopy</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>7.002: Fundamentals of Experimental Biology</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>21W.762: Poetry Workshop</h4>
-                                </div>
-                            </div>
+                <div class="work-list">
+                    <article class="work-item">
+                        <div>
+                            <p class="work-type">Research direction</p>
+                            <h3>Environmental conditions and neural dynamics</h3>
                         </div>
-
-                        <div class="semester-section">
-                            <h3>Spring 2025</h3>
-                            <div class="course-list">
-                                <div class="course-item">
-                                    <h4>9.26: Principles and Applications of Genetic Engineering for Neuroscience and Biotechnology</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>5.08: Fundamentals of Chemical Biology</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.7800: Inference and Information (Grad)</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>21H.290: Economic Classics, The History of Economic Ideas from Ancient Times to the Present</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.3732: Statistics, Computation, and Applications (Grad)</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.UAR: Seminar in Advanced Undergraduate Research</h4>
-                                </div>
-                            </div>
+                        <p>
+                            Computational approaches to understanding how different environments affect the brain, behavior, and neural population activity.
+                        </p>
+                    </article>
+                    <article class="work-item">
+                        <div>
+                            <p class="work-type">Methodological interest</p>
+                            <h3>Machine learning for biological signal processing</h3>
                         </div>
-
-                        <div class="semester-section">
-                            <h3>Fall 2024</h3>
-                            <div class="course-list">
-                                <div class="course-item">
-                                    <h4>18.03: Differential Equations</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.8611: Quantitative Methods for Natural Language Processing</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.1210: Intro to Algorithms</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>21H.262: Palestine and the Arab-Israeli Conflict</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>5.601: Thermodynamics and Kinetics I</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.7960: Deep Learning (Grad)</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.UAR: Seminar in Advanced Undergraduate Research</h4>
-                                </div>
-                            </div>
+                        <p>
+                            Models for recovering latent structure in biological and neural data, especially where measurement noise and limited labels make inference difficult.
+                        </p>
+                    </article>
+                    <article class="work-item">
+                        <div>
+                            <p class="work-type">Long-term direction</p>
+                            <h3>Representation learning for medicine and discovery</h3>
                         </div>
-
-                    </div>
-
-                    <details class="older-coursework">
-                        <summary>Earlier coursework (Spring 2024 and prior)</summary>
-                        <div class="semesters-grid">
-                            <div class="semester-section">
-                                <h3>Spring 2024</h3>
-                                <div class="course-list">
-                                    <div class="course-item">
-                                        <h4>6.3900: Intro to Machine Learning</h4>
-                                    </div>
-                                    <div class="course-item">
-                                        <h4>18.600: Probability and Random Variables</h4>
-                                    </div>
-                                    <div class="course-item">
-                                        <h4>7.05: General Biochemistry</h4>
-                                    </div>
-                                    <div class="course-item">
-                                        <h4>21H.161: The Modern Middle East</h4>
-                                    </div>
-                                    <div class="course-item">
-                                        <h4>6.1200: Mathematics for Computer Science</h4>
-                                    </div>
-                                    <div class="course-item">
-                                        <h4>9.09: Cellular and Molecular Neurobiology</h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <div class="semester-section">
-                            <h3>Fall 2023</h3>
-                            <div class="course-list">
-                                <div class="course-item">
-                                    <h4>6.1010: Fundamentals of Programming</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>9.01: Intro to Neuroscience</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>7.03: Genetics</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>5.13: Organic Chemistry II</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>21H.160: Islam, the Middle East, and the West</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="semester-section">
-                            <h3>Spring 2023</h3>
-                            <div class="course-list">
-                                <div class="course-item">
-                                    <h4>5.12: Organic Chemistry I</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>18.02: Multivariable Calculus</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>7.016: Introductory Biology</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>8.02: Physics II, Electricity and Magnetism</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>9.00: Intro to Psychological Science</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="semester-section">
-                            <h3>Fall 2022</h3>
-                            <div class="course-list">
-                                <div class="course-item">
-                                    <h4>8.01: Physics I, Classical Mechanics</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>18.01: Single Variable Calculus</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>5.111: Principles of Chemical Science</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>6.100A: Introduction to Computer Science and Programming</h4>
-                                </div>
-                                <div class="course-item">
-                                    <h4>21W.031: Science Writing for The Public</h4>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </details>
+                        <p>
+                            Deep learning systems for personalized therapeutics, molecular representation, and scientific workflows that connect data to actionable hypotheses.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Teaching Section -->
-    <section id="teaching" class="teaching">
-        <div class="container">
-            <h2 class="section-title">Teaching</h2>
-            <div class="section-content">
-                <div class="teaching-content">
-                    <div class="teaching-category">
-                        <h3>Teaching Experience</h3>
-                        <div class="teaching-semesters-grid">
-                            <div class="teaching-semester-section">
-                                <h4>Fall 2025</h4>
-                                <ul class="teaching-list">
-                                    <li>Teaching Assistant for 6.7960: Deep Learning</li>
-                                </ul>
-                            </div>
+        <section id="teaching" class="teaching">
+            <div class="container split-section">
+                <div class="section-heading">
+                    <p class="section-label">Teaching</p>
+                    <h2>Teaching, tutoring, and mentoring.</h2>
+                </div>
+                <div class="timeline-list">
+                    <article class="timeline-item">
+                        <p class="timeline-date">Fall 2025</p>
+                        <h3>Teaching Assistant, 6.7960 Deep Learning</h3>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-date">2024-2025</p>
+                        <h3>Lab Assistant, 6.3900 Intro to Machine Learning</h3>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-date">2024-2025</p>
+                        <h3>Departmental tutoring</h3>
+                        <p>
+                            Biology tutor for introductory biology, genetics, and biochemistry; HKN EECS tutor for machine learning, programming, mathematics for computer science, and algorithms.
+                        </p>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-date">Winter 2024-2025</p>
+                        <h3>MIT MISTI Global Teaching Labs</h3>
+                        <p>Machine learning instructor in Morocco.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                            <div class="teaching-semester-section">
-                                <h4>Spring 2025</h4>
-                                <ul class="teaching-list">
-                                    <li>Lab Assistant for 6.3900: Intro to Machine Learning</li>
-                                </ul>
-                            </div>
+        <section id="coursework" class="coursework">
+            <div class="container split-section">
+                <div class="section-heading">
+                    <p class="section-label">Selected coursework</p>
+                    <h2>Coursework shaping my research lens.</h2>
+                </div>
+                <div class="course-grid">
+                    <article class="course-group">
+                        <h3>AI, ML, and computation</h3>
+                        <p>Deep Learning, Intro to Machine Learning, Quantitative NLP, Multiagent Learning, Statistical Learning Theory, Inference and Information, Algorithms.</p>
+                    </article>
+                    <article class="course-group">
+                        <h3>Neuroscience and cognition</h3>
+                        <p>Computational Cognitive Science, Systems Neuroscience Laboratory, Genetic Engineering for Neuroscience and Biotechnology, Cellular and Molecular Neurobiology.</p>
+                    </article>
+                    <article class="course-group">
+                        <h3>Mathematics and statistics</h3>
+                        <p>Real Analysis, Probability and Random Variables, Differential Equations, Statistics, Computation, and Applications, Mathematics for Computer Science.</p>
+                    </article>
+                    <article class="course-group">
+                        <h3>Biology and chemistry</h3>
+                        <p>Fundamentals of Chemical Biology, General Biochemistry, Genetics, Organic Chemistry, Experimental Biology, Thermodynamics and Kinetics.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                            <div class="teaching-semester-section">
-                                <h4>Fall 2024</h4>
-                                <ul class="teaching-list">
-                                    <li>Lab Assistant for 6.3900: Intro to Machine Learning</li>
-                                </ul>
-                            </div>
-                        </div>
+        <section id="contact" class="contact">
+            <div class="container split-section">
+                <div class="section-heading">
+                    <p class="section-label">Contact</p>
+                    <h2>Open to research conversations and collaborations.</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <p class="contact-label">Email</p>
+                        <a class="email" href="mailto:mabdel03@mit.edu">mabdel03@mit.edu</a>
                     </div>
-
-                    <div class="teaching-category">
-                        <h3>Tutoring &amp; Mentoring</h3>
-                        <div class="teaching-semesters-grid">
-                            <div class="teaching-semester-section">
-                                <h4>Spring 2025</h4>
-                                <ul class="teaching-list">
-                                    <li>Biology Department tutor for 7.01x (Intro Biology), 7.03 (Genetics), and 7.05 (General Biochemistry)</li>
-                                    <li>HKN EECS Department tutor for 6.3900 (Intro Machine Learning), 6.1010 (Fundamentals of Computer Programming), 6.1200 (Math for Computer Science), and 6.1210 (Intro Algorithms)</li>
-                                </ul>
-                            </div>
-
-                            <div class="teaching-semester-section">
-                                <h4>Winter 2024-2025</h4>
-                                <ul class="teaching-list">
-                                    <li>MIT MISTI Global Teaching Labs Machine Learning Instructor (Morocco)</li>
-                                </ul>
-                            </div>
-
-                            <div class="teaching-semester-section">
-                                <h4>Fall 2024</h4>
-                                <ul class="teaching-list">
-                                    <li>Biology Department tutor for 7.01x (Intro Biology), 7.03 (Genetics), and 7.05 (General Biochemistry)</li>
-                                    <li>HKN EECS Department tutor for 6.3900 (Intro Machine Learning), 6.1010 (Fundamentals of Computer Programming), and 6.1200 (Math for Computer Science)</li>
-                                </ul>
-                            </div>
-
-                            <div class="teaching-semester-section">
-                                <h4>Spring 2024</h4>
-                                <ul class="teaching-list">
-                                    <li>Biology Department tutor for 7.01x (Intro Biology) and 7.03 (Genetics)</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="contact-card">
+                        <p class="contact-label">Institution</p>
+                        <p>Massachusetts Institute of Technology<br>Cambridge, MA</p>
+                    </div>
+                    <div class="contact-card link-card">
+                        <p class="contact-label">Links</p>
+                        <a href="https://drive.google.com/file/d/1wP1GTiiMdcDNB0h-v924xeZlx3aXhNKO/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+                        <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/Mabdel-03" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912" target="_blank" rel="noopener">Google Scholar</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Notes Section -->
-    <section id="current-endeavors" class="current-endeavors">
-        <div class="container">
-            <h2 class="section-title">Notes</h2>
-            <div class="section-content">
-                <div class="endeavors-content">
-                    <div class="endeavor-subsection">
-                        <h3>Reading</h3>
-                        <p>Papers and books I've been working through recently, with one-line takeaways.</p>
-                        <ul class="endeavor-list">
-                            <!-- TODO: replace these placeholders with real entries. -->
-                            <li><em>Paper title</em> &mdash; Authors (Year). One-line takeaway: what surprised me, what I'd push on.</li>
-                            <li><em>Book or chapter</em> &mdash; Author (Year). One-line takeaway.</li>
-                            <li><em>Paper title</em> &mdash; Authors (Year). One-line takeaway.</li>
-                        </ul>
-                    </div>
-
-                    <div class="endeavor-subsection">
-                        <h3>Recently</h3>
-                        <p>What I've been working on outside of coursework &mdash; research projects, side experiments, talks. <!-- TODO: 2&ndash;4 sentences on current threads. --></p>
-                    </div>
-
-                    <div class="endeavor-subsection">
-                        <h3>Thinking about</h3>
-                        <p>Open questions I find generative right now. <!-- TODO: list a few questions you'd want to discuss with a visiting researcher. -->.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="section-content">
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <strong>Email:</strong> mabdel03@mit.edu
-                    </div>
-                    <div class="contact-item">
-                        <strong>Institution:</strong> Massachusetts Institute of Technology (MIT)
-                    </div>
-                    <div class="contact-item">
-                        <strong>Departments:</strong> EECS, Brain and Cognitive Science, Chemistry, and Biology
-                    </div>
-                    <div class="contact-item">
-                        <strong>Address:</strong> MIT<br> Cambridge, MA 02139
-                    </div>
-                </div>
-
-                <div class="links-section">
-                    <h3>Links</h3>
-                    <div class="external-links">
-                        <a href="https://drive.google.com/file/d/1wP1GTiiMdcDNB0h-v924xeZlx3aXhNKO/view?usp=sharing" class="link" target="_blank" rel="noopener">Curriculum Vitae (CV)</a><br>
-                        <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/" class="link" target="_blank" rel="noopener">LinkedIn Profile</a><br>
-                        <a href="https://github.com/Mabdel-03" class="link" target="_blank" rel="noopener">GitHub</a><br>
-                        <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912" class="link" target="_blank" rel="noopener">Google Scholar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year">2026</span> Mahmoud Abdelmoneum. All rights reserved.</p>
+            <p>&copy; <span id="year">2026</span> Mahmoud Abdelmoneum</p>
         </div>
     </footer>
 
