@@ -91,27 +91,58 @@
         <section id="work" class="section" aria-labelledby="work-title">
             <h2 id="work-title">Selected work</h2>
             <article class="project" id="fly-atlas">
-                <h3>MantisViewer</h3>
-                <p>A browser for comparing gene expression across 566,254 cells in the Fly Cell Atlas and Aging Fly Cell Atlas.</p>
-                <div class="links"><a href="https://github.com/Mabdel-03/Flybase-MantisViewer" aria-label="MantisViewer code">Code</a></div>
-            </article>
-            <article class="project" id="pai-msc">
-                <h3>pAI/MSc</h3>
-                <p>Given a researcher’s hypothesis, our agents search the literature, develop proofs, and run experiments in machine learning theory.</p>
+                <h3>Searching a cell atlas with words</h3>
+                <p>I’m building tools with FlyBase that match gene-expression profiles to descriptions of fruit fly cells. A researcher can start with a cell type or tissue and find cells whose expression fits that description.</p>
                 <div class="links">
-                    <a href="https://arxiv.org/abs/2604.20622" aria-label="pAI/MSc technical report">Report</a>
-                    <a href="https://github.com/PoggioAI/PoggioAI_MSc" aria-label="pAI/MSc code">Code</a>
+                    <a href="https://github.com/Mabdel-03/Flybase-CellRep">Cell–language model code</a>
                 </div>
             </article>
+            <article class="project" id="single-cell-agents">
+                <h3>AI agents for biological data analysis</h3>
+                <p>We built SCAPE to test whether agents choose sound analysis steps and reach defensible conclusions from single-cell data. In related work, we use workflows from earlier studies to guide cell annotation and protein analysis on new datasets.</p>
+                <div class="links">
+                    <a href="https://openreview.net/forum?id=licXCh3QRs">SCAPE paper</a>
+                    <a href="https://moleculediscovery.github.io/workshop2026/accepted-contributions/">SCAPE poster acceptance · ML4Molecules at NeurIPS 2026</a>
+                </div>
+            </article>
+            <article class="project" id="pai-msc">
+                <h3>AI agents for scientific research</h3>
+                <p>I helped build a system that takes a researcher’s hypothesis through literature review, mathematical analysis, and experiments. In a separate survey, we examined what evidence can support the claims such systems produce.</p>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2604.20622">pAI/MSc preprint</a>
+                    <a href="https://github.com/PoggioAI/PoggioAI_MSc" aria-label="pAI/MSc code">Code</a>
+                    <a href="https://openreview.net/pdf?id=iAfYyiCzev">Peer-reviewed survey · AI for Science Workshop at ICML 2026</a>
+                </div>
+            </article>
+            <article class="project" id="reasoning-budget">
+                <h3>How should an AI system spend its reasoning time?</h3>
+                <p>With a fixed compute budget, I compare one model revising its answer with several models voting or debating. I track when a correct answer first appears and whether the system ultimately selects it.</p>
+            </article>
             <article class="project" id="muon">
-                <h3>How Muon shapes learning</h3>
-                <p>We studied how Muon changes a network’s weight matrices during training and why its advantage over AdamW depends on the task.</p>
-                <div class="links"><a href="https://arxiv.org/abs/2606.08388" aria-label="Muon preprint">Preprint</a></div>
+                <h3>Why the choice of optimizer matters</h3>
+                <p>We studied how Muon reshapes weight matrices during training. It outperformed AdamW on a small language model, but the ranking reversed on a small vision transformer.</p>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2606.08388">Muon preprint</a>
+                </div>
             </article>
             <article class="project" id="brain-gene-expression">
-                <h3>Personality and gene expression</h3>
-                <p>My MIT SuperUROP asked how personality and experiences such as social isolation relate to gene regulation in the human prefrontal cortex.</p>
-                <div class="links"><a href="https://superurop.mit.edu/scholars/mahmoud-abdelmoneum/" aria-label="MIT SuperUROP project profile">MIT profile</a></div>
+                <h3>Social experience and the aging brain</h3>
+                <p>I use genetics and brain MRI to study social isolation and differences in white matter. With single-nucleus RNA data, I also ask how childhood adversity relates to gene expression in the aging human brain.</p>
+                <div class="links">
+                    <a href="https://github.com/Mabdel-03/BOLT-LMM_SI-MRI">Imaging genetics code</a>
+                    <a href="https://superurop.mit.edu/scholars/mahmoud-abdelmoneum/">Related MIT project on personality and gene regulation</a>
+                </div>
+            </article>
+            <article class="project" id="early-environments">
+                <h3>Early environments and behavior</h3>
+                <p>I analyze movement patterns in mother mice and their offspring to study how behavior varies with social isolation, environmental enrichment, and limited nesting materials.</p>
+                <div class="links">
+                    <a href="https://github.com/Mabdel-03/BAP_Moseq">Behavior analysis code</a>
+                </div>
+            </article>
+            <article class="project" id="mobile-vision">
+                <h3>Mobile vision assessment</h3>
+                <p>At OHSU, I help develop a near-vision assessment app for people with presbyopia and a screening app for early signs of nearsightedness in children.</p>
             </article>
         </section>
 
