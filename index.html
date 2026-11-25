@@ -60,204 +60,101 @@
 </head>
 
 <body>
+    <canvas id="neural-field" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main">Skip to main content</a>
+
     <header class="masthead">
         <nav class="container primary-nav" aria-label="Primary navigation">
             <a class="monogram" href="#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
             <ul>
-                <li><a href="#work">Selected work</a></li>
-                <li><a href="#research">Interests</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main" tabindex="-1">
-        <section id="home" class="hero" aria-labelledby="name">
-            <div class="container hero-grid">
-                <div id="about" class="hero-copy">
-                    <p class="eyebrow">MIT · Computer Science &amp; Neuroscience</p>
-                    <h1 id="name"><span>Mahmoud</span> Abdelmoneum</h1>
-                    <p class="introduction">I’m a master’s student at MIT. I build AI agents that help researchers test ideas, study how neural networks learn, and develop tools for exploring gene expression one cell at a time.</p>
-                    <div class="hero-links">
-                        <a class="button" href="#work">Explore my work</a>
-                        <a class="text-link" href="https://docs.google.com/document/d/1EcYGKKHokweB_0wmnnuizFOa0PxKA5Oc/edit?usp=sharing&amp;ouid=112318663727048852218&amp;rtpof=true&amp;sd=true">Résumé</a>
-                    </div>
+    <main class="container" id="main" tabindex="-1">
+        <section id="home" class="intro" aria-labelledby="name">
+            <div id="about">
+                <p class="affiliation">MIT · Computer Science &amp; Neuroscience</p>
+                <h1 id="name">Mahmoud Abdelmoneum</h1>
+                <p id="research" class="bio">I’m a master’s student studying how neural networks learn and what human cognition can teach us about AI. I build AI agents for scientific research and tools for exploring single-cell biology.</p>
+                <div class="links">
+                    <a href="https://docs.google.com/document/d/1EcYGKKHokweB_0wmnnuizFOa0PxKA5Oc/edit?usp=sharing&amp;ouid=112318663727048852218&amp;rtpof=true&amp;sd=true">Résumé</a>
+                    <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912">Google Scholar</a>
                 </div>
-                <figure class="portrait">
-                    <img src="profile-photo.jpg" alt="Mahmoud Abdelmoneum" width="1000" height="1000" decoding="async" fetchpriority="high">
-                </figure>
             </div>
+            <img class="portrait" src="profile-photo.jpg" alt="Mahmoud Abdelmoneum" width="1000" height="1000" decoding="async" fetchpriority="high">
         </section>
 
-        <section id="work" class="section work" aria-labelledby="work-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="work-title">Selected work</h2>
-                    <a class="text-link" href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912">Google Scholar</a>
+        <section id="work" class="section" aria-labelledby="work-title">
+            <h2 id="work-title">Selected work</h2>
+            <article class="project" id="fly-atlas">
+                <h3>MantisViewer</h3>
+                <p>A browser for comparing gene expression across 566,254 cells in the Fly Cell Atlas and Aging Fly Cell Atlas.</p>
+                <div class="links"><a href="https://github.com/Mabdel-03/Flybase-MantisViewer" aria-label="MantisViewer code">Code</a></div>
+            </article>
+            <article class="project" id="pai-msc">
+                <h3>pAI/MSc</h3>
+                <p>Given a researcher’s hypothesis, our agents search the literature, develop proofs, and run experiments in machine learning theory.</p>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2604.20622" aria-label="pAI/MSc technical report">Report</a>
+                    <a href="https://github.com/PoggioAI/PoggioAI_MSc" aria-label="pAI/MSc code">Code</a>
                 </div>
-                <article class="featured-project" id="fly-atlas">
-                    <div class="feature-copy">
-                        <p class="eyebrow">Single-cell biology · Software</p>
-                        <h3>Exploring the Fly Cell Atlas</h3>
-                        <p>Where in a fruit fly is a particular gene active? I’m building MantisViewer to help researchers explore that question across the Fly Cell Atlas and the Aging Fly Cell Atlas. They can select a tissue, compare cell types, and see which genes distinguish them.</p>
-                        <a class="text-link" href="https://github.com/Mabdel-03/Flybase-MantisViewer">MantisViewer code and documentation</a>
-                    </div>
-                    <div class="atlas-scale">
-                        <p class="atlas-number">566,254</p>
-                        <p>cells in the combined fly atlases</p>
-                    </div>
-                </article>
-
-                <div class="project-list">
-                    <article class="project" id="pai-msc">
-                        <div class="project-meta">
-                            <p class="eyebrow">Scientific agents</p>
-                            <p>2026 · Technical report</p>
-                        </div>
-                        <div>
-                            <h3>pAI/MSc</h3>
-                            <p>A researcher supplies a machine learning hypothesis. Our open-source system coordinates agents to find relevant literature, work through the mathematics, and run experiments. The researcher can inspect and steer the work along the way.</p>
-                            <p class="byline">With Pierfrancesco Beneventano and Tomaso Poggio</p>
-                            <div class="resource-links">
-                                <a href="https://arxiv.org/abs/2604.20622" aria-label="Read the pAI/MSc report">Read the report</a>
-                                <a href="https://github.com/PoggioAI/PoggioAI_MSc" aria-label="View the pAI/MSc code">View code</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project" id="muon">
-                        <div class="project-meta">
-                            <p class="eyebrow">Learning theory</p>
-                            <p>2026 · Preprint</p>
-                        </div>
-                        <div>
-                            <h3>The spectral dynamics and noise geometry of Muon</h3>
-                            <p>Why does the same optimizer help one model and hurt another? We studied how Muon reshapes weight matrices during training. In our experiments, Muon beat AdamW on a small language model, while AdamW performed better on a small vision transformer.</p>
-                            <p class="byline">With Pierfrancesco Beneventano and Tomaso Poggio</p>
-                            <div class="resource-links">
-                                <a href="https://arxiv.org/abs/2606.08388" aria-label="Read the Muon preprint">Read the preprint</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project" id="brain-gene-expression">
-                        <div class="project-meta">
-                            <p class="eyebrow">Computational neuroscience</p>
-                            <p>2024–2025 · MIT SuperUROP</p>
-                        </div>
-                        <div>
-                            <h3>Personality, environment, and gene expression in the brain</h3>
-                            <p>How do experiences such as social isolation relate to molecular differences in the human brain? My SuperUROP project asked how genetic data and single-nucleus measurements from the prefrontal cortex could help connect personality and environmental exposures to gene regulation.</p>
-                            <p class="byline">Advised by Manolis Kellis and Li-Huei Tsai</p>
-                            <div class="resource-links">
-                                <a href="https://superurop.mit.edu/scholars/mahmoud-abdelmoneum/">Read the MIT project profile</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
+            </article>
+            <article class="project" id="muon">
+                <h3>How Muon shapes learning</h3>
+                <p>We studied how Muon changes a network’s weight matrices during training and why its advantage over AdamW depends on the task.</p>
+                <div class="links"><a href="https://arxiv.org/abs/2606.08388" aria-label="Muon preprint">Preprint</a></div>
+            </article>
+            <article class="project" id="brain-gene-expression">
+                <h3>Personality and gene expression</h3>
+                <p>My MIT SuperUROP asked how personality and experiences such as social isolation relate to gene regulation in the human prefrontal cortex.</p>
+                <div class="links"><a href="https://superurop.mit.edu/scholars/mahmoud-abdelmoneum/" aria-label="MIT SuperUROP project profile">MIT profile</a></div>
+            </article>
         </section>
 
-        <section id="research" class="section interests" aria-labelledby="research-title">
-            <div class="container split">
-                <h2 id="research-title">Research interests</h2>
-                <div class="directions">
-                    <div>
-                        <h3>What can AI contribute to a scientific experiment?</h3>
-                        <p>I’m interested in how a scientist can check an agent’s reasoning, reproduce its analysis, and decide which of its conclusions to pursue.</p>
-                    </div>
-                    <div>
-                        <h3>What determines what a neural network learns?</h3>
-                        <p>I use theory and small, controlled experiments to study how the choice of optimizer changes the representations a network learns.</p>
-                    </div>
-                    <div>
-                        <h3>What can biological intelligence teach us about AI?</h3>
-                        <p>I want to connect explanations of intelligence across scales, from gene expression and neural activity to perception and behavior. I’m especially interested in which principles of human learning could inform artificial systems.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="teaching" class="section teaching" aria-labelledby="teaching-title">
-            <div class="container split">
-                <h2 id="teaching-title">Teaching</h2>
-                <div>
-                    <ul class="teaching-list">
-                        <li>
-                            <span class="term">Fall 2026</span>
-                            <div>
-                                <h3>Statistical Learning Theory and Applications</h3>
-                                <p>Teaching assistant · MIT 9.520 / 6.7910</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="term">Fall 2025</span>
-                            <div>
-                                <h3>Deep Learning</h3>
-                                <p>Teaching assistant · MIT 6.7960</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="term">2024–2025</span>
-                            <div>
-                                <h3>Introduction to Machine Learning</h3>
-                                <p>Lab assistant · MIT 6.3900</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="term">Winter 2024–25</span>
-                            <div>
-                                <h3>MIT MISTI Global Teaching Labs</h3>
-                                <p>Machine learning instructor in Morocco</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="term">2024–2025</span>
-                            <div>
-                                <h3>Departmental tutoring</h3>
-                                <p>MIT Biology and HKN EECS tutor in biology, biochemistry, genetics, programming, machine learning, discrete mathematics, and algorithms.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <details id="coursework">
-                        <summary>Selected coursework</summary>
-                        <dl class="courses">
-                            <dt>AI and computation</dt>
-                            <dd>Deep Learning, Quantitative NLP, Multiagent Learning, Statistical Learning Theory, Inference and Information, Introduction to Machine Learning, Algorithms.</dd>
-                            <dt>Neuroscience and cognition</dt>
-                            <dd>Computational Cognitive Science, Systems Neuroscience Laboratory, Genetic Engineering for Neuroscience and Biotechnology, Cellular and Molecular Neurobiology.</dd>
-                            <dt>Mathematics and statistics</dt>
-                            <dd>Real Analysis, Probability and Random Variables, Differential Equations, Statistics, Computation, and Applications, Mathematics for Computer Science.</dd>
-                            <dt>Biology and chemistry</dt>
-                            <dd>Fundamentals of Chemical Biology, General Biochemistry, Genetics, Organic Chemistry, Experimental Biology, Thermodynamics and Kinetics.</dd>
-                        </dl>
-                    </details>
-                </div>
-            </div>
+        <section id="teaching" class="section" aria-labelledby="teaching-title">
+            <h2 id="teaching-title">Teaching</h2>
+            <ul class="appointments">
+                <li><span>Statistical Learning Theory and Applications</span><span>TA · MIT 9.520 / 6.7910 · Fall 2026</span></li>
+                <li><span>Deep Learning</span><span>TA · MIT 6.7960 · Fall 2025</span></li>
+            </ul>
+            <details>
+                <summary>Earlier teaching</summary>
+                <ul class="earlier">
+                    <li>MIT 6.3900 Introduction to Machine Learning · Lab assistant, 2024–25</li>
+                    <li>MIT MISTI Global Teaching Labs · Machine learning instructor in Morocco, winter 2024–25</li>
+                    <li>MIT Biology and HKN EECS · Departmental tutor, 2024–25</li>
+                </ul>
+            </details>
+            <details id="coursework">
+                <summary>Selected coursework</summary>
+                <dl class="courses">
+                    <dt>AI and computation</dt>
+                    <dd>Deep Learning, Quantitative NLP, Multiagent Learning, Statistical Learning Theory, Inference and Information, Introduction to Machine Learning, Algorithms.</dd>
+                    <dt>Neuroscience and cognition</dt>
+                    <dd>Computational Cognitive Science, Systems Neuroscience Laboratory, Genetic Engineering for Neuroscience and Biotechnology, Cellular and Molecular Neurobiology.</dd>
+                    <dt>Mathematics and statistics</dt>
+                    <dd>Real Analysis, Probability and Random Variables, Differential Equations, Statistics, Computation, and Applications, Mathematics for Computer Science.</dd>
+                    <dt>Biology and chemistry</dt>
+                    <dd>Fundamentals of Chemical Biology, General Biochemistry, Genetics, Organic Chemistry, Experimental Biology, Thermodynamics and Kinetics.</dd>
+                </dl>
+            </details>
         </section>
 
         <section id="contact" class="section contact" aria-labelledby="contact-title">
-            <div class="container split">
-                <h2 id="contact-title">Get in touch</h2>
-                <div>
-                    <p>I welcome conversations about research and collaborations.</p>
-                    <a class="contact-email" href="mailto:mabdel03@mit.edu">mabdel03@mit.edu</a>
-                    <div class="resource-links">
-                        <a href="https://github.com/Mabdel-03">GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912">Google Scholar</a>
-                        <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/">LinkedIn</a>
-                    </div>
-                </div>
+            <h2 id="contact-title">Contact</h2>
+            <div class="links">
+                <a href="mailto:mabdel03@mit.edu">mabdel03@mit.edu</a>
+                <a href="https://github.com/Mabdel-03">GitHub</a>
+                <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/">LinkedIn</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <span>© <span id="year">2026</span> Mahmoud Abdelmoneum</span>
-            <span>Cambridge, Massachusetts</span>
-        </div>
-    </footer>
     <script src="script.js"></script>
+    <script src="neural-field.js"></script>
 </body>
 </html>
