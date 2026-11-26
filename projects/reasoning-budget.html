@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How should an AI system spend its reasoning time? | Mahmoud Abdelmoneum</title>
-    <meta name="description" content="Finding a correct answer and choosing to keep it are two different uses of computation.">
+    <title>Regime-Dependent Inference-Time Compute Allocation | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="When should a reasoning model spend its budget on a longer attempt, and when should it sample several answers and vote?">
     <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/reasoning-budget.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How should an AI system spend its reasoning time?">
-    <meta property="og:description" content="Finding a correct answer and choosing to keep it are two different uses of computation.">
+    <meta property="og:title" content="Regime-Dependent Inference-Time Compute Allocation">
+    <meta property="og:description" content="When should a reasoning model spend its budget on a longer attempt, and when should it sample several answers and vote?">
     <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/reasoning-budget.html">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="../styles.css">
@@ -22,7 +22,7 @@
         <nav class="container primary-nav" aria-label="Primary navigation">
             <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
             <ul>
-                <li><a href="../index.html#work">Selected work</a></li>
+                <li><a href="../index.html#work">Research interests</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
         </nav>
@@ -30,9 +30,9 @@
     <main id="main" class="container" tabindex="-1">
         <article>
             <header class="study-heading">
-                <span class="study-field">Inference-time compute</span>
-                <h1>How should an AI system spend its reasoning time?</h1>
-                <div class="study-deck">Finding a correct answer and choosing to keep it are two different uses of computation.</div>
+                <span class="study-field">Agents</span>
+                <h1>Regime-Dependent Inference-Time Compute Allocation</h1>
+                <div class="study-deck">When should a reasoning model spend its budget on a longer attempt, and when should it sample several answers and vote?</div>
             </header>
             <figure class="project-figure">
                 <div class="figure-canvas">
@@ -116,7 +116,7 @@
                 </section>
                 <section aria-labelledby="results-heading">
                     <h2 id="results-heading">What we found</h2>
-                    <p>We compared longer reasoning runs, repeated sampling, revision, and multi-agent discussion on reasoning benchmarks. For the model we tested, longer individual runs gave the strongest accuracy on harder groups of questions. When short attempts frequently succeeded, voting could reach the same accuracy more cheaply. Tracking which answers were generated, preserved, and finally selected helped explain the difference.</p>
+                    <p>We compared longer reasoning runs, repeated sampling, revision, and multi-agent discussion on reasoning benchmarks. For the model we tested, longer individual runs gave the strongest accuracy on harder groups of questions. For questions with reliable shallow-reasoning solutions, voting could reach the same accuracy with less computation. Tracking which answers were generated, preserved, and finally selected helped explain the difference.</p>
                 </section>
             </div>
             <section class="study-sources" aria-labelledby="sources-heading">
@@ -129,8 +129,8 @@
             </section>
         </article>
         <nav class="study-footer" aria-label="Project navigation">
-            <a href="../index.html#reasoning-budget">Back to selected work</a>
-            <a rel="next" href="muon.html">Next · What Muon changes during training</a>
+            <a href="../index.html#reasoning-budget">Back to research interests</a>
+            <a rel="next" href="muon.html">Next · The Spectral Dynamics and Noise Geometry of Muon</a>
         </nav>
     </main>
     <script src="../neural-field.js"></script>

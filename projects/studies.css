@@ -24,6 +24,14 @@
     text-wrap: balance;
 }
 
+.study-heading h1.long-title {
+    max-width: 32ch;
+    font-size: clamp(2rem, 4.5vw, 3.45rem);
+}
+
+.study-heading .venue-credit { margin-top: 0.45rem; }
+.study-heading .venue-credit + .study-deck { margin-top: 0.8rem; }
+
 .study-deck {
     max-width: 58ch;
     color: var(--body);

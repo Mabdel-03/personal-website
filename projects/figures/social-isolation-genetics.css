@@ -1,0 +1,53 @@
+.cell-enrichment {
+    padding: clamp(1.1rem, 4vw, 2.6rem);
+    color: #172629;
+    font-family: system-ui, sans-serif;
+}
+.enrichment-title {
+    display: block;
+    font-size: clamp(1.18rem, 2.9vw, 1.75rem);
+    line-height: 1.2;
+    letter-spacing: -.025em;
+    font-weight: 620;
+}
+.enrichment-subtitle {
+    display: block;
+    margin-top: .45rem;
+    color: #4c655b;
+    font-size: .88rem;
+}
+.cell-enrichment dl {
+    margin: 1.7rem 0 .25rem;
+}
+.cell-enrichment dl div {
+    display: grid;
+    grid-template-columns: minmax(8rem, .9fr) minmax(0, 2fr);
+    gap: 1rem;
+    align-items: center;
+    padding-block: .55rem;
+}
+.cell-enrichment dt {
+    font-size: .96rem;
+    line-height: 1.35;
+}
+.cell-enrichment dd {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    margin: 0;
+    border-inline-start: 1px solid #a7b8ae;
+    color: #245c52;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+}
+.enrichment-bar {
+    flex: 0 0 var(--length);
+    height: 1.2rem;
+    background: #438075;
+    border-radius: 0 2px 2px 0;
+}
+@media (max-width: 35rem) {
+    .cell-enrichment dl div { grid-template-columns: 1fr; gap: .35rem; }
+    .cell-enrichment dl { margin-top: 1rem; }
+    .enrichment-bar { height: .95rem; }
+}

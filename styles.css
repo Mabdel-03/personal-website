@@ -165,21 +165,58 @@ h2 {
     letter-spacing: -0.025em;
 }
 
-.project + .project { margin-top: 1.3rem; }
-
-.project h3, .appointments li > :first-child {
-    font: 600 1.03rem/1.4 var(--sans);
+.interests > h2 {
+    margin-bottom: 2rem;
 }
 
-.project p {
-    margin-top: 0.2rem;
-    color: var(--body);
-    max-width: 45rem;
+.interest-area + .interest-area {
+    margin-top: 2.6rem;
+    padding-top: 1.7rem;
+    border-top: 1px solid var(--line);
 }
 
-.project .links {
-    margin-top: 0.35rem;
+.interest-area > h3 {
+    margin: 0 0 1.25rem;
+    font: 400 clamp(1.6rem, 3.8vw, 2.25rem)/1.15 var(--serif);
+    letter-spacing: -0.025em;
 }
+
+.interest-track {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.77fr) minmax(0, 2.1fr);
+    column-gap: clamp(1.25rem, 4vw, 3rem);
+    align-items: baseline;
+}
+
+.interest-track + .interest-track { margin-top: 1.8rem; }
+.track-projects { min-width: 0; }
+
+.track-title, .other-field {
+    margin: 0;
+    color: var(--accent);
+    font: 600 0.95rem/1.45 var(--sans);
+}
+
+.topic-title {
+    margin: 0 0 0.65rem;
+    color: var(--muted);
+    font: 500 0.9rem/1.4 var(--sans);
+}
+
+.research-group + .research-group, .research-group + .project { margin-top: 1.45rem; }
+.project + .project { margin-top: 1rem; }
+.project-title, .appointments li > :first-child { font: 600 1.03rem/1.4 var(--sans); }
+.project-title { margin: 0; text-wrap: pretty; }
+.project p { margin-top: 0.2rem; color: var(--body); max-width: 62ch; }
+.project .paper-link { display: inline-block; margin-top: 0.25rem; font-size: 0.92rem; }
+.venue-credit {
+    color: var(--muted);
+    font: italic 1rem/1.43 var(--serif);
+}
+.project .venue-credit { margin-top: 0.27rem; }
+.venue-credit a { text-decoration-color: rgb(169 219 204 / 55%); }
+.venue-credit em { font-style: inherit; }
+.other-field { margin: 1.6rem 0 0.6rem; }
 
 .appointments li {
     display: flex;
@@ -209,6 +246,13 @@ summary::marker { color: var(--muted); }
 .earlier li + li, .courses dd + dt { margin-top: 0.5rem; }
 .courses dt { font-weight: 600; }
 .contact { padding-bottom: 0; }
+
+@media (max-width: 42rem) {
+    .interest-track { grid-template-columns: 1fr; row-gap: 0.65rem; }
+    .track-projects { border-left: 1px solid var(--line); padding-left: 0.9rem; }
+    .interest-area + .interest-area { margin-top: 1.9rem; }
+    .interests > h2 { margin-bottom: 1.4rem; }
+}
 
 @media (max-width: 38rem) {
     .container { width: calc(100% - 2.25rem); }

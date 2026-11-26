@@ -1,0 +1,109 @@
+.fly-workbench {
+    --workbench-line: #b7c7c0;
+    --workbench-ink: #173d37;
+    font: 1rem/1.45 system-ui, sans-serif;
+    color: #172629;
+    padding: clamp(1rem, 4vw, 2.5rem);
+}
+.fly-workbench fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-inline-size: 0;
+    position: relative;
+}
+.fly-workbench legend {
+    font-size: clamp(1.2rem, 2.8vw, 1.65rem);
+    font-weight: 620;
+    letter-spacing: -.035em;
+    padding: 0;
+}
+.fly-workbench input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+.fly-workbench .mode-picker {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .2rem;
+    margin: .7rem 0 1.15rem;
+    padding: .2rem;
+    border: 1px solid var(--workbench-line);
+    border-radius: .5rem;
+}
+.fly-workbench label {
+    padding: .5rem .75rem;
+    color: var(--workbench-ink);
+    cursor: pointer;
+    border-radius: .32rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+#fly-process:checked ~ .mode-picker [for="fly-process"],
+#fly-investigate:checked ~ .mode-picker [for="fly-investigate"] { color: white; background: #245a50; }
+#fly-process:focus-visible ~ .mode-picker [for="fly-process"],
+#fly-investigate:focus-visible ~ .mode-picker [for="fly-investigate"] {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px var(--workbench-ink);
+}
+.fly-workbench .workbench-view {
+    display: none;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(1rem, 4vw, 3rem);
+    border-top: 1px solid var(--workbench-line);
+    padding-top: 1.1rem;
+}
+#fly-process:checked ~ #process-view,
+#fly-investigate:checked ~ #investigate-view { display: grid; }
+.fly-workbench .cell-map {
+    position: relative;
+    background: #f0f3ed;
+    border-radius: .25rem;
+    width: 100%;
+    aspect-ratio: 1.9;
+    overflow: hidden;
+    isolation: isolate;
+}
+.cell-map i {
+    position: absolute;
+    width: 47%;
+    height: 57%;
+    --dot: .14rem;
+    background:
+        radial-gradient(circle at 22% 44%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 27% 61%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 35% 25%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 36% 46%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 37% 73%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 42% 57%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 48% 36%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 50% 68%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 53% 50%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 61% 23%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 64% 55%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 70% 40%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 73% 65%, currentColor var(--dot), transparent calc(var(--dot) + .02rem)),
+        radial-gradient(circle at 82% 32%, currentColor var(--dot), transparent calc(var(--dot) + .02rem));
+}
+.cell-map .population-a { left: 0; top: 18%; color: #286650; transform: rotate(-13deg); }
+.cell-map .population-b { left: 34%; top: 46%; color: #9f592f; transform: rotate(-27deg); }
+.cell-map .population-c { left: 57%; top: 0; color: #496879; transform: rotate(45deg); }
+#investigate-view .population-c, #investigate-view .population-b { color: #bbc7bb; }
+#investigate-view .population-a::after {
+    content: "";
+    position: absolute;
+    inset: 13% 10% 14% 13%;
+    border-radius: 50%;
+    border: 1px solid #286650;
+}
+.fly-workbench .workbench-view strong { display: block; font-size: clamp(1.03rem, 2.3vw, 1.35rem); color: var(--workbench-ink); line-height: 1.3; }
+.fly-workbench .workbench-view small { display: block; color: #415b52; font-size: .95rem; margin-top: .5rem; }
+@media (max-width: 34rem) {
+    .fly-workbench .workbench-view { grid-template-columns: minmax(0, 1fr); }
+    .fly-workbench label { padding: .45rem .55rem; }
+}

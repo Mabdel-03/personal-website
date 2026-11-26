@@ -67,7 +67,7 @@
         <nav class="container primary-nav" aria-label="Primary navigation">
             <a class="monogram" href="#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
             <ul>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#work">Interests</a></li>
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -79,7 +79,7 @@
             <div id="about">
                 <p class="affiliation">MIT · Computer Science &amp; Neuroscience</p>
                 <h1 id="name">Mahmoud Abdelmoneum</h1>
-                <p id="research" class="bio">I’m a master’s student studying how neural networks learn and what human cognition can teach us about AI. I build AI agents for scientific research and tools for exploring single-cell biology.</p>
+                <p id="research" class="bio">I’m a master’s student at MIT. I build AI agents and foundation models for science, study how neural networks learn and reason, and investigate how social experience relates to the brain.</p>
                 <div class="links">
                     <a href="https://docs.google.com/document/d/1EcYGKKHokweB_0wmnnuizFOa0PxKA5Oc/edit?usp=sharing&amp;ouid=112318663727048852218&amp;rtpof=true&amp;sd=true">Résumé</a>
                     <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912">Google Scholar</a>
@@ -88,82 +88,134 @@
             <img class="portrait" src="profile-photo.jpg" alt="Mahmoud Abdelmoneum" width="1000" height="1000" decoding="async" fetchpriority="high">
         </section>
 
-        <section id="work" class="section" aria-labelledby="work-title">
-            <h2 id="work-title">Selected work</h2>
-            <article class="project" id="fly-atlas">
-                <h3><a href="projects/fly-atlas.html">Searching a cell atlas with words</a></h3>
-                <p>I build tools with FlyBase that match gene-expression profiles to biological descriptions of fruit fly cells.</p>
-                <div class="links">
-                    <a href="https://github.com/Mabdel-03/Flybase-CellRep">Cell–language model code</a>
+        <section id="work" class="section interests" aria-labelledby="work-title">
+            <h2 id="work-title">Research interests</h2>
+            <section class="interest-area" aria-labelledby="ai-for-science">
+                <h3 id="ai-for-science">AI for Science</h3>
+                <div class="interest-track">
+                    <h4 class="track-title">Agents for Science</h4>
+                    <div class="track-projects">
+                        <div class="research-group">
+                            <h5 class="topic-title">Single Cell Biology</h5>
+                            <article class="project" id="flybase-platform">
+                                <h6 class="project-title"><a href="projects/flybase-platform.html">FlyBase Single Cell Analysis Platform</a></h6>
+                                <p>Tools for exploring and analyzing fruit fly cell atlases with AI agents.</p>
+                            </article>
+                            <article class="project" id="single-cell-agents">
+                                <h6 class="project-title"><a href="projects/single-cell-agents.html">SCAPE: Single-Cell Analysis Proficiency Exam</a></h6>
+                                <p>An evaluation of the decisions agents make when analyzing single-cell data.</p>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=licXCh3QRs">Work presented at the ML4Molecules workshop of NeurIPS 2026</a></em></div>
+                            </article>
+                            <article class="project" id="omics-workflows">
+                                <h6 class="project-title"><a href="projects/omics-workflows.html">AutoBio: Evidence-Guided Adaptation of Biological Analysis Workflows</a></h6>
+                                <p>Adapting workflows from earlier studies to identify cell types and quantify proteins.</p>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=uwEOTDQtw2">Work presented at the Agentic AI for Biological Discovery workshop of NeurIPS 2026</a></em></div>
+                            </article>
+                        </div>
+                        <div class="research-group">
+                            <h5 class="topic-title">Applied Math / ML Theory</h5>
+                            <article class="project" id="pai-msc">
+                                <h6 class="project-title"><a href="projects/pai-msc.html">pAI/MSc: Automating ML-Theory Research with Humans on the Loop</a></h6>
+                                <p>A system for developing a theory and testing it against experiments.</p>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=stUy1jdrKC">Work presented at the AI for Science workshop of NeurIPS 2026</a></em></div>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=T0ErkSml8w">Work presented at the Who Verifies the Agents? workshop of NeurIPS 2026</a></em></div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-            </article>
-            <article class="project" id="single-cell-agents">
-                <h3><a href="projects/single-cell-agents.html">Can an AI agent analyze single-cell data?</a></h3>
-                <p>We built SCAPE to test both the steps an agent takes and the biological conclusions it reaches.</p>
-                <div class="links">
-                    <a href="https://openreview.net/forum?id=licXCh3QRs">SCAPE paper</a>
-                    <a href="https://moleculediscovery.github.io/workshop2026/accepted-contributions/">Accepted poster · ML4Molecules at NeurIPS 2026</a>
+                <div class="interest-track">
+                    <h4 class="track-title">Foundation Models for Science</h4>
+                    <div class="track-projects">
+                        <div class="research-group">
+                            <h5 class="topic-title">Single Cell Foundation Models</h5>
+                            <article class="project" id="fly-atlas">
+                                <h6 class="project-title"><a href="projects/fly-atlas.html">FlyCellWhisperer</a></h6>
+                                <p>A cell–language model for searching fruit fly atlases with biological descriptions.</p>
+                            </article>
+                        </div>
+                        <div class="research-group">
+                            <h5 class="topic-title">Biological Reasoning Models</h5>
+                            <article class="project" id="biological-reasoning">
+                                <h6 class="project-title"><a href="projects/biological-reasoning.html">Measuring Evidence Use in Biological Reasoning Models</a></h6>
+                                <p>Testing how language models use molecular evidence to make a biological prediction.</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-            </article>
-            <article class="project" id="omics-workflows">
-                <h3><a href="projects/omics-workflows.html">Choosing workflows for omics data</a></h3>
-                <p>We use workflows from earlier studies to guide cell annotation and protein analysis on new datasets.</p>
-                <div class="links">
-                    <a href="projects/omics-workflows.html#sources-heading">Workshop papers · NeurIPS 2026</a>
+            </section>
+            <section class="interest-area" aria-labelledby="pure-ai">
+                <h3 id="pure-ai">Pure AI</h3>
+                <div class="interest-track">
+                    <h4 class="track-title">Agents</h4>
+                    <div class="track-projects">
+                        <article class="project" id="reasoning-budget">
+                            <h5 class="project-title"><a href="projects/reasoning-budget.html">Regime-Dependent Inference-Time Compute Allocation</a></h5>
+                            <p>When should a model reason longer, revise an answer, or sample another one?</p>
+                        </article>
+                    </div>
                 </div>
-            </article>
-            <article class="project" id="pai-msc">
-                <h3><a href="projects/pai-msc.html">AI agents for scientific research</a></h3>
-                <p>I helped build a system that takes a researcher’s hypothesis through literature review, mathematical analysis, and experiments.</p>
-                <div class="links">
-                    <a href="projects/pai-msc.html#sources-heading">Workshop papers · NeurIPS 2026</a>
-                    <a href="https://arxiv.org/abs/2604.20622">pAI/MSc preprint</a>
-                    <a href="https://github.com/PoggioAI/PoggioAI_MSc">pAI/MSc code</a>
+                <div class="interest-track">
+                    <h4 class="track-title">Deep Learning</h4>
+                    <div class="track-projects">
+                        <article class="project" id="muon">
+                            <h5 class="project-title"><a href="projects/muon.html">The Spectral Dynamics and Noise Geometry of Muon</a></h5>
+                            <p>How an optimizer changes the spectrum of a network’s learned weights.</p>
+                            <a class="paper-link" href="https://arxiv.org/abs/2606.08388">arXiv preprint</a>
+                        </article>
+                    </div>
                 </div>
-            </article>
+            </section>
+            <section class="interest-area" aria-labelledby="neuroscience">
+                <h3 id="neuroscience">Cellular &amp; Molecular Neuroscience</h3>
+                <div class="interest-track">
+                    <h4 class="track-title">ACE Analysis · RNA-seq + Behavior</h4>
+                    <div class="track-projects">
+                        <article class="project" id="childhood-adversity-expression">
+                            <h5 class="project-title"><a href="projects/childhood-adversity-expression.html">Cell-Type-Specific Transcriptomic Effects of Adverse Childhood Experiences in the Human Prefrontal Cortex</a></h5>
+                            <p>How adverse childhood experiences relate to gene expression in the aging brain, alongside a study of early adversity and mouse behavior.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="interest-track">
+                    <h4 class="track-title">SI Analysis · MRI + Behavior</h4>
+                    <div class="track-projects">
+                        <article class="project" id="brain-gene-expression">
+                            <h5 class="project-title"><a href="projects/brain-gene-expression.html">The Lonely Mind: An MRI Investigation of the Effects of Social Isolation on the Brain</a></h5>
+                            <p>Human brain imaging and a complementary study of mouse behavior after social isolation.</p>
+                            <a class="paper-link" href="https://superurop.mit.edu/wp-content/uploads/2026/03/RESEARCH-GUIDE_2024-2025.pdf#page=31">Photo of the MIT poster</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="interest-track">
+                    <h4 class="track-title">SI Analysis · Genetics</h4>
+                    <div class="track-projects">
+                        <article class="project" id="social-isolation-genetics">
+                            <h5 class="project-title"><a href="projects/social-isolation-genetics.html">Cellular Etiology of Social Isolation Traits</a></h5>
+                            <p>Using UK Biobank data to study genetic associations with social isolation and loneliness.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="other-work" class="section other-work" aria-labelledby="other-title">
+            <h2 id="other-title">Other selected work</h2>
             <article class="project" id="scientific-agent-survey">
-                <h3><a href="projects/scientific-agent-survey.html">What evidence supports an AI scientist’s claims?</a></h3>
-                <p>We surveyed research agents by the work they produce and the evidence available to check their claims.</p>
-                <div class="links">
-                    <a href="https://openreview.net/forum?id=iAfYyiCzev">Workshop poster · AI for Science at ICML 2026</a>
-                </div>
-            </article>
-            <article class="project" id="reasoning-budget">
-                <h3><a href="projects/reasoning-budget.html">How should an AI system spend its reasoning time?</a></h3>
-                <p>I compare one model reasoning for longer with several models voting or debating under a fixed compute budget.</p>
-            </article>
-            <article class="project" id="muon">
-                <h3><a href="projects/muon.html">Why the choice of optimizer matters</a></h3>
-                <p>We studied how Muon reshapes weight matrices and why its advantage over AdamW depends on the task.</p>
-                <div class="links">
-                    <a href="https://arxiv.org/abs/2606.08388">Muon preprint</a>
-                </div>
-            </article>
-            <article class="project" id="brain-gene-expression">
-                <h3><a href="projects/brain-gene-expression.html">Social isolation and the brain’s white matter</a></h3>
-                <p>I use genetics and diffusion MRI to study a tract that connects the brain’s frontal regions.</p>
-                <div class="links">
-                    <a href="https://github.com/Mabdel-03/BOLT-LMM_SI-MRI">Imaging genetics code</a>
-                </div>
-            </article>
-            <article class="project" id="childhood-adversity-expression">
-                <h3><a href="projects/childhood-adversity-expression.html">Childhood adversity and gene expression</a></h3>
-                <p>I study how early experiences relate to gene expression in different cell types in the aging human brain.</p>
+                <h3 class="project-title"><a href="projects/scientific-agent-survey.html">Agent Systems for Academic Research Automation</a></h3>
+                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=iAfYyiCzev">Work presented at the AI for Science workshop of ICML 2026</a></em></div>
             </article>
             <article class="project" id="early-environments">
-                <h3><a href="projects/early-environments.html">Early environments and behavior</a></h3>
-                <p>I analyze movement patterns in mother mice and their offspring across different early environments.</p>
-                <div class="links">
-                    <a href="https://github.com/Mabdel-03/BAP_Moseq">Behavior analysis code</a>
-                </div>
+                <h3 class="project-title"><a href="projects/early-environments.html">How does early housing shape mouse behavior?</a></h3>
+                <p>Behavioral data and code for the mouse studies.</p>
             </article>
+            <h3 class="other-field">OHSU · Ophthalmology</h3>
             <article class="project" id="mobile-vision">
-                <h3><a href="projects/near-vision.html">Assessing near vision</a></h3>
-                <p>At OHSU, I help develop a mobile near-vision assessment for people with presbyopia.</p>
+                <h4 class="project-title"><a href="projects/near-vision.html">Assessing near vision in presbyopia</a></h4>
+                <p>A mobile research prototype for assessing near vision.</p>
             </article>
             <article class="project" id="childhood-vision">
-                <h3><a href="projects/childhood-vision.html">Screening for childhood myopia</a></h3>
-                <p>At OHSU, I help develop a mobile screening app for early signs of nearsightedness in children.</p>
+                <h4 class="project-title"><a href="projects/childhood-vision.html">Screening for myopia in childhood</a></h4>
+                <p>A mobile research prototype for screening for early signs of childhood myopia.</p>
             </article>
         </section>
 
