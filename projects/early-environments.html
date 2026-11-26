@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How does early housing shape mouse behavior? | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="Depth video reveals the short movements that make up a mouse’s behavior and the order in which they occur.">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/early-environments.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How does early housing shape mouse behavior?">
+    <meta property="og:description" content="Depth video reveals the short movements that make up a mouse’s behavior and the order in which they occur.">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/early-environments.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+    <link rel="stylesheet" href="figures/early-environments.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Research interests</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">Behavioral neuroscience</span>
+                <h1>How does early housing shape mouse behavior?</h1>
+                <div class="study-deck">Depth video reveals the short movements that make up a mouse’s behavior and the order in which they occur.</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <div class="syllable-figure">
+                        <fieldset>
+                            <legend>How often does each movement occur?</legend>
+                            <input aria-controls="female-counts" checked="" class="sex-choice" id="offspring-female" name="offspring-sex" type="radio"/>
+                            <input aria-controls="male-counts" class="sex-choice" id="offspring-male" name="offspring-sex" type="radio"/>
+                            <div class="sex-switch">
+                                <label for="offspring-female">Female offspring</label>
+                                <label for="offspring-male">Male offspring</label>
+                            </div>
+                            <div class="female-counts" id="female-counts">
+                                <table>
+                                    <caption>Female offspring · share of all counts in each housing group</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Syllable</th>
+                                            <th scope="col">Standard</th>
+                                            <th scope="col">Enriched</th>
+                                            <th scope="col">Isolated</th>
+                                            <th scope="col">Limited<br/>nesting</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">00</th>
+                                            <td style="background-color:#9bcbba">3.6%</td>
+                                            <td style="background-color:#a7d1c1">3.1%</td>
+                                            <td style="background-color:#83bfab">4.6%</td>
+                                            <td style="background-color:#a9d2c2">3.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">01</th>
+                                            <td style="background-color:#9dccbb">3.5%</td>
+                                            <td style="background-color:#afd5c6">2.8%</td>
+                                            <td style="background-color:#84bfab">4.6%</td>
+                                            <td style="background-color:#a0cdbd">3.4%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">02</th>
+                                            <td style="background-color:#b9dacd">2.3%</td>
+                                            <td style="background-color:#cce3d8">1.6%</td>
+                                            <td style="background-color:#a2cebe">3.3%</td>
+                                            <td style="background-color:#bcdbcf">2.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">03</th>
+                                            <td style="background-color:#95c8b6">3.8%</td>
+                                            <td style="background-color:#8fc5b2">4.1%</td>
+                                            <td style="background-color:#a3cfbf">3.2%</td>
+                                            <td style="background-color:#92c7b4">4.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">04</th>
+                                            <td style="background-color:#a3cfbf">3.3%</td>
+                                            <td style="background-color:#b4d7c9">2.6%</td>
+                                            <td style="background-color:#a5d0c0">3.2%</td>
+                                            <td style="background-color:#a7d1c1">3.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">05</th>
+                                            <td style="background-color:#c6e0d5">1.8%</td>
+                                            <td style="background-color:#c5e0d4">1.9%</td>
+                                            <td style="background-color:#aad2c3">3.0%</td>
+                                            <td style="background-color:#c0ddd1">2.1%</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th scope="row">All counts</th>
+                                            <td>29,820</td>
+                                            <td>17,922</td>
+                                            <td>18,898</td>
+                                            <td>7,304</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="male-counts" id="male-counts">
+                                <table>
+                                    <caption>Male offspring · share of all counts in each housing group</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Syllable</th>
+                                            <th scope="col">Standard</th>
+                                            <th scope="col">Enriched</th>
+                                            <th scope="col">Isolated</th>
+                                            <th scope="col">Limited<br/>nesting</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">00</th>
+                                            <td style="background-color:#7dbca7">4.8%</td>
+                                            <td style="background-color:#70b69f">5.4%</td>
+                                            <td style="background-color:#88c2ae">4.4%</td>
+                                            <td style="background-color:#7abaa5">5.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">01</th>
+                                            <td style="background-color:#a3cfbf">3.3%</td>
+                                            <td style="background-color:#afd5c6">2.8%</td>
+                                            <td style="background-color:#84bfab">4.6%</td>
+                                            <td style="background-color:#90c5b3">4.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">02</th>
+                                            <td style="background-color:#84bfab">4.5%</td>
+                                            <td style="background-color:#a4cfbf">3.2%</td>
+                                            <td style="background-color:#8cc3b0">4.2%</td>
+                                            <td style="background-color:#8cc4b0">4.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">03</th>
+                                            <td style="background-color:#c0ddd1">2.1%</td>
+                                            <td style="background-color:#b3d7c9">2.6%</td>
+                                            <td style="background-color:#c3dfd3">1.9%</td>
+                                            <td style="background-color:#96c8b7">3.8%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">04</th>
+                                            <td style="background-color:#acd3c4">2.9%</td>
+                                            <td style="background-color:#b7d9cb">2.4%</td>
+                                            <td style="background-color:#b6d8ca">2.5%</td>
+                                            <td style="background-color:#a5d0c0">3.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">05</th>
+                                            <td style="background-color:#9ccbba">3.5%</td>
+                                            <td style="background-color:#aad2c3">3.0%</td>
+                                            <td style="background-color:#99cab8">3.7%</td>
+                                            <td style="background-color:#95c8b6">3.8%</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th scope="row">All counts</th>
+                                            <td>27,983</td>
+                                            <td>12,467</td>
+                                            <td>15,559</td>
+                                            <td>16,278</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <figcaption>Six of the 60 movement syllables in the offspring model are shown. Each percentage divides one syllable’s count by the total for all 60 in the same sex and housing group. Counts are pooled across recordings. Darker cells indicate larger percentages on a common scale.</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>Two mice can travel the same distance while spending their time very differently. We wanted to know whether standard housing, enrichment, social isolation, or limited nesting and bedding are associated with differences in the movements mothers and offspring make. We also asked whether their movements tend to follow one another in different sequences.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>Wiltschko and colleagues introduced Motion Sequencing (MoSeq), which learns recurring fragments of mouse movement from depth video. Each fragment, called a syllable, receives a numerical label. We fit separate models for mothers and offspring. Within the offspring model, a label describes the same learned movement across housing groups, so its frequency can be compared across recordings.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we found</h2>
+                    <p>I produced syllable counts, transition matrices, and behavioral profiles for the housing groups. In the female offspring recordings shown here, syllable 00 accounted for 4.6% of counts in the social-isolation group and 3.6% in standard housing. The table lets you inspect the corresponding numbers in male offspring and see how many movement counts each percentage summarizes.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li><a href="https://github.com/Mabdel-03/BAP_Moseq">Project code · Motion sequencing of mothers and offspring</a></li>
+                    <li><a href="https://github.com/Mabdel-03/BAP_Moseq/tree/80166660d7ff04456bff764da8c45fa6d6e831d1/12-1-2025_Run/Offsprings/data">Source data · Offspring syllable counts and transition matrices</a></li>
+                    <li><a href="https://doi.org/10.1016/j.neuron.2015.11.031">Wiltschko et al. · Mapping Sub-Second Structure in Mouse Behavior, Neuron (2015)</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#early-environments">Back to other selected work</a>
+            <a rel="next" href="near-vision.html">Next · Assessing near vision in presbyopia</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assessing near vision in presbyopia | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="A mobile research app for assessing the close-up vision people rely on to read.">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/near-vision.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Assessing near vision in presbyopia">
+    <meta property="og:description" content="A mobile research app for assessing the close-up vision people rely on to read.">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/near-vision.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Research interests</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">Ophthalmology</span>
+                <h1>Assessing near vision in presbyopia</h1>
+                <div class="study-deck">A mobile research app for assessing the close-up vision people rely on to read.</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <img src="figures/near-vision-illustration.webp" alt="Illustration of an adult’s hands holding an open book, with reading glasses nearby." width="1350" height="900" decoding="async">
+                </div>
+                <figcaption>Reading at close range is often where people first notice a change in their vision. Illustration.</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>When small print grows harder to read, holding a menu a little farther away can bring it back into focus. This is a familiar experience of presbyopia, the gradual loss of near focusing ability as the eye’s lens becomes less flexible with age. We wanted to make near-vision assessment available in a portable format.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>Standardized reading charts have long helped eye-care researchers study near vision. Some use sentences matched for difficulty, so a change in reading performance is easier to interpret across print sizes. This work established reading itself as a meaningful measure of how well someone sees up close.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we delivered</h2>
+                    <p>At Oregon Health &amp; Science University, I help develop a mobile research prototype for assessing near vision in people with presbyopia. It gives the team a portable format for studying changes in near vision.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li><a href="https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/presbyopia">National Eye Institute · Presbyopia</a></li>
+                    <li><a href="https://pubmed.ncbi.nlm.nih.gov/38574851/">Radner · Toward an internationally accepted standard for reading charts</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#mobile-vision">Back to other selected work</a>
+            <a rel="next" href="childhood-vision.html">Next · Screening for myopia in childhood</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.brain-map {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(.75rem, 4vw, 2.5rem);
+    padding: clamp(1rem, 4vw, 2.5rem);
+    color: #172629;
+    font-family: system-ui, sans-serif;
+}
+.brain-map .brain-panel { display: grid; justify-items: center; }
+.brain-map .brain-panel img { width: 100%; max-width: 22rem; display: block; }
+.brain-map .tract-key {
+    display: inline-flex; align-items: center; gap: .45rem;
+    color: #285d54; font-size: .9rem; font-weight: 650;
+}
+.brain-map .tract-key::before { content: ''; width: 1.4em; height: .22em; border-radius: .15em; background: #237d73; }
+.brain-map .diffusion-title { display: block; font-weight: 600; font-size: clamp(1.25rem, 2.8vw, 1.65rem); line-height: 1.2; letter-spacing: -.03em; }
+.brain-map dl { margin: .9rem 0 0; }
+.brain-map dl div { display: grid; grid-template-columns: 1fr; gap: .2rem; padding: .65rem 0; border-top: 1px solid #cdd7d0; }
+.brain-map dt { font-size: .9rem; font-weight: 650; color: #23675d; }
+.brain-map dd { margin: 0; font-size: 1rem; line-height: 1.3; }
+@media (max-width: 35rem) {
+    .brain-map { grid-template-columns: 1fr; gap: 1rem; }
+    .brain-map .brain-panel img { max-width: 14rem; }
+    .brain-map dl { margin-top: .65rem; }
+    .brain-map dl div { padding-block: .48rem; }
+}

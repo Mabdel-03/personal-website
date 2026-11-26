@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AutoBio: Evidence-Guided Adaptation of Biological Analysis Workflows | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="We tested whether adapting an existing analysis could improve cell-type identification and estimates of protein abundance.">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/omics-workflows.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AutoBio: Evidence-Guided Adaptation of Biological Analysis Workflows">
+    <meta property="og:description" content="We tested whether adapting an existing analysis could improve cell-type identification and estimates of protein abundance.">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/omics-workflows.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Research interests</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">Scientific agents · Single-cell biology</span>
+                <h1 class="long-title">AutoBio: Evidence-Guided Adaptation of Biological Analysis Workflows</h1>
+                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=uwEOTDQtw2">Work presented at the Agentic AI for Biological Discovery workshop of NeurIPS 2026</a></em></div>
+                <div class="study-deck">We tested whether adapting an existing analysis could improve cell-type identification and estimates of protein abundance.</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <picture>
+                        <source media="(max-width: 38rem)" srcset="figures/omics-workflows-mobile.webp" width="720" height="1088">
+                        <img src="figures/omics-workflows.webp" width="1600" height="644" alt="Two examples of workflow evaluation. Compare predicted cell types with expert labels. Compare estimated protein ratios with the known ratios in a mixture.">
+                    </picture>
+                </div>
+                <figcaption>Each task has its own reference. Cell-type transfer is scored against the labels in a new study. Protein estimates can be checked against the composition of a prepared mixture. The drawings illustrate the tasks.</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>When a new dataset arrives, an analyst often starts with a workflow that worked on an earlier study. A new tissue, a different instrument, or rarer cell types can change which choices work well. We wanted to know when testing a few changes to a familiar workflow is worth the effort, given a fixed number of analyses we can run.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>The pipeComp framework made it possible to compare whole single-cell workflows and trace how the choice at one step affected later steps. Fang and colleagues then showed that the relative performance of pipelines can vary across datasets. We built on those findings by giving the search a concrete target for each dataset, such as recovering the cell labels in a new study.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we delivered</h2>
+                    <p>We tested AutoBio on three cell-annotation tasks and two protein-recovery tasks. On the pancreas dataset, choosing among four starting workflows raised the average recall across cell types from 81.4% to 98.4%. Further search found the lowest error observed in each protein benchmark. For cell annotation, the benefit of further search varied by dataset.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li>Related paper · <a href="https://openreview.net/forum?id=tAqLFG2IZw">AutoCompBio: Literature-Grounded Workflow Optimization for Computational Biology</a>
+                        <div class="venue-credit"><em><a href="https://openreview.net/forum?id=tAqLFG2IZw">Work presented at the AI Data Readiness for Scientific Discovery workshop of NeurIPS 2026</a></em></div>
+                    </li>
+                    <li><a href="https://doi.org/10.1186/s13059-020-02136-7">pipeComp · Genome Biology, 2020</a></li>
+                    <li><a href="https://doi.org/10.1186/s13059-024-03304-9">Predicting dataset-specific pipeline performance · Genome Biology, 2024</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#omics-workflows">Back to research interests</a>
+            <a rel="next" href="pai-msc.html">Next · pAI/MSc: Automating ML-Theory Research with Humans on the Loop</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>

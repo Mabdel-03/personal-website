@@ -1,0 +1,82 @@
+.syllable-figure {
+    padding: clamp(1rem, 4vw, 2.5rem);
+    color: #172629;
+    font-family: system-ui, sans-serif;
+}
+.syllable-figure fieldset {
+    position: relative;
+    min-inline-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.syllable-figure legend {
+    padding: 0;
+    font-size: clamp(1.15rem, 3vw, 1.65rem);
+    line-height: 1.2;
+    font-weight: 620;
+    letter-spacing: -.025em;
+}
+.syllable-figure .sex-choice {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+.syllable-figure .sex-switch {
+    display: inline-flex;
+    gap: .2rem;
+    margin: .85rem 0 1rem;
+    border: 1px solid #afc1b9;
+    border-radius: 2rem;
+    padding: .18rem;
+}
+.syllable-figure label {
+    cursor: pointer;
+    padding: .34rem .85rem;
+    border-radius: 1.5rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+#offspring-female:checked ~ .sex-switch [for="offspring-female"],
+#offspring-male:checked ~ .sex-switch [for="offspring-male"] {
+    color: #fff;
+    background: #23594f;
+}
+#offspring-female:focus-visible ~ .sex-switch [for="offspring-female"],
+#offspring-male:focus-visible ~ .sex-switch [for="offspring-male"] {
+    outline: 2px solid #172629;
+    outline-offset: 2px;
+}
+.syllable-figure .male-counts, #offspring-male:checked ~ .female-counts { display: none; }
+#offspring-male:checked ~ .male-counts { display: block; }
+.syllable-figure table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 2px;
+    color: #172629;
+    font-size: clamp(.78rem, 2.3vw, .98rem);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.25;
+}
+.syllable-figure caption {
+    text-align: left;
+    color: #465b55;
+    font-size: .86rem;
+    padding-bottom: .45rem;
+}
+.syllable-figure th, .syllable-figure td { text-align: center; padding: .52rem .15rem; }
+.syllable-figure th { font-weight: 550; }
+.syllable-figure tbody th, .syllable-figure tfoot th, .syllable-figure thead th:first-child {
+    text-align: left;
+}
+.syllable-figure thead th, .syllable-figure tfoot th { font-size: .85em; }
+.syllable-figure tbody td { border-radius: 2px; }
+.syllable-figure tbody th { color: #435951; }
+.syllable-figure tfoot td, .syllable-figure tfoot th { padding-top: .65rem; }
+@media (max-width: 30rem) {
+    .syllable-figure { padding-inline: .65rem; }
+    .syllable-figure thead th { font-size: .9em; }
+}

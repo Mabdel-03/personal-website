@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FlyCellWhisperer | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="Can a short description of a fly cell retrieve the right gene-expression profile?">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/fly-atlas.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FlyCellWhisperer">
+    <meta property="og:description" content="Can a short description of a fly cell retrieve the right gene-expression profile?">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/fly-atlas.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Research interests</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">Single Cell Foundation Models</span>
+                <h1>FlyCellWhisperer</h1>
+                <div class="study-deck">Can a short description of a fly cell retrieve the right gene-expression profile?</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <picture>
+                        <source media="(max-width: 38rem)" srcset="figures/fly-atlas-mobile.webp" width="720" height="1100">
+                        <img src="figures/fly-atlas.webp" width="1600" height="712" alt="Gene-expression measurements and a description such as “adult fly muscle cell” enter the same search space. A text query lies near several candidate atlas cells.">
+                    </picture>
+                </div>
+                <figcaption>The diagram illustrates a text query and an expression profile in a shared search space. The positions are schematic. Nearby cells are candidates to inspect in the atlas.</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>A fly cell atlas records which genes are active in individual cells. A biologist might come to the atlas with a phrase like “adult fly muscle cell,” without knowing which genes to search for. We wanted to make that phrase a starting point for finding cells and, in the other direction, to see which descriptions fit an unfamiliar expression profile.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>The Fly Cell Atlas maps cell types across the adult fruit fly, and the Aging Fly Cell Atlas follows those tissues across the lifespan. Both pair gene-expression profiles with expert annotations. CellWhisperer showed how a model trained on human expression data and accompanying text could learn to search across the two. We adapted that idea to the vocabulary and annotations of the fly atlases.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we delivered</h2>
+                    <p>We built FlyCellWhisperer to match fly cells with descriptions of their identity and tissue. Our code pairs expression profiles with captions, trains the two representations together, and tests retrieval on held-out cells. It also compares cell encoders and training-set sizes, so we can ask which choices help the model recover an atlas annotation.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li><a href="https://github.com/Mabdel-03/Flybase-CellRep/tree/main/Drosophila">Cell–language models and evaluation code · GitHub</a></li>
+                    <li><a href="https://doi.org/10.1126/science.abk2432">Fly Cell Atlas · Science, 2022</a></li>
+                    <li><a href="https://doi.org/10.1126/science.adg0934">Aging Fly Cell Atlas · Science, 2023</a></li>
+                    <li><a href="https://doi.org/10.1038/s41587-025-02857-9">CellWhisperer · Nature Biotechnology</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#fly-atlas">Back to research interests</a>
+            <a rel="next" href="biological-reasoning.html">Next · Measuring Evidence Use in Biological Reasoning Models</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>

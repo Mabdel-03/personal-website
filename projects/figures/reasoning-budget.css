@@ -1,0 +1,159 @@
+.reasoning-example {
+    --rb-ink: #172629;
+    --rb-muted: #4b5c59;
+    --rb-line: #a8b9b3;
+    --rb-good: #20685d;
+    --rb-bad: #914627;
+    color: var(--rb-ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    padding: clamp(1rem, 3.5vw, 2.5rem);
+}
+.reasoning-example fieldset {
+    min-inline-size: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: relative;
+}
+.reasoning-example legend {
+    padding: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: 650;
+}
+.reasoning-example .rb-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+.rb-options {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    padding: 0.2rem;
+    border: 1px solid var(--rb-line);
+    border-radius: 0.5rem;
+}
+.rb-options label {
+    cursor: pointer;
+    border-radius: 0.34rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+#rb-vote:checked ~ .rb-options [for="rb-vote"],
+#rb-revise:checked ~ .rb-options [for="rb-revise"] {
+    color: #fff;
+    background: #23594f;
+}
+#rb-vote:focus-visible ~ .rb-options [for="rb-vote"],
+#rb-revise:focus-visible ~ .rb-options [for="rb-revise"] {
+    outline: 2px solid var(--rb-ink);
+    outline-offset: 3px;
+}
+.rb-view {display: none;}
+#rb-vote:checked ~ .rb-views .rb-vote,
+#rb-revise:checked ~ .rb-views .rb-revise {display: block;}
+.rb-question {
+    padding: 1.4rem 0 1.05rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    line-height: 1.35;
+    max-width: 35rem;
+}
+.rb-calls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.rb-calls li {
+    position: relative;
+    text-align: center;
+    min-width: 0;
+    padding: 0 0.16rem;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 0.25rem;
+}
+.rb-call-name, .rb-note, .rb-answer small {
+    color: var(--rb-muted);
+    font-size: 0.875rem;
+    line-height: 1.32;
+}
+.rb-calls b {
+    color: var(--rb-bad);
+    font: 600 clamp(1.55rem, 5vw, 2.35rem)/1.1 Georgia, serif;
+    padding: 0.17rem 0;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+.rb-calls .rb-correct {color: var(--rb-good);}
+.rb-graph-mark {
+    display: block;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin: 0.35rem 0 0.45rem;
+    border-radius: 50%;
+    border: 2px solid #677e76;
+    background: #f7f8f5;
+    position: relative;
+    z-index: 1;
+}
+.rb-vote .rb-calls, .rb-revise .rb-calls {position: relative;}
+.rb-vote .rb-calls {padding-top: 1.1rem;}
+.rb-vote .rb-calls::before {
+    content: "";
+    position: absolute;
+    inset: 0.38rem 16.67% auto;
+    border-top: 1px solid var(--rb-line);
+}
+.rb-vote li::before {
+    content: "";
+    position: absolute;
+    top: -0.72rem;
+    height: 1.32rem;
+    left: 50%;
+    border-left: 1px solid var(--rb-line);
+}
+.rb-revise .rb-calls {
+    padding-top: 1.1rem;
+}
+.rb-revise .rb-calls::before {
+    content: "";
+    position: absolute;
+    inset: 1.78rem 16.67% auto;
+    border-top: 1px solid var(--rb-line);
+}
+.rb-revise li + li::after {
+    content: "";
+    position: absolute;
+    width: 0.38rem;
+    height: 0.38rem;
+    left: -0.15rem;
+    top: 0.48rem;
+    border-top: 1px solid #657d74;
+    border-right: 1px solid #657d74;
+    transform: rotate(45deg);
+}
+.rb-answer {
+    margin-top: 1.2rem;
+    border-top: 1px solid var(--rb-line);
+    padding-top: 0.8rem;
+    line-height: 1.45;
+}
+.rb-answer strong {color: var(--rb-bad);}
+.rb-revise .rb-answer strong {color: var(--rb-good);}
+.rb-answer small {display: block; margin-top: 0.25rem;}
+@media (max-width: 26rem) {
+    .rb-options label {padding-inline: 0.55rem;}
+}
+@media print {
+    .rb-options, .reasoning-example .rb-radio {display: none;}
+    .reasoning-example .rb-view {display: block;}
+    .rb-view + .rb-view {margin-top: 1.2rem;}
+}

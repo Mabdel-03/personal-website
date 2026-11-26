@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmoud Abdelmoneum | MIT MEng | AI &amp; Neuroscience</title>
-    <meta name="description" content="Mahmoud Abdelmoneum is an MIT Master of Engineering student studying Computer Science and Neuroscience, with interests in AI for science, computational neuroscience, and neuroscience-inspired AI.">
+    <title>Mahmoud Abdelmoneum | AI, Learning Theory &amp; Computational Biology</title>
+    <meta name="description" content="Research by Mahmoud Abdelmoneum at MIT on AI agents for science, how neural networks learn, and single-cell approaches to biology and neuroscience.">
     <link rel="canonical" href="https://mabdel-03.github.io/personal-website/">
 
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Mahmoud Abdelmoneum | MIT MEng | AI &amp; Neuroscience">
-    <meta property="og:description" content="MIT Master of Engineering student studying Computer Science and Neuroscience, interested in AI for science and neuroscience-inspired AI.">
+    <meta property="og:title" content="Mahmoud Abdelmoneum | AI, Learning Theory &amp; Computational Biology">
+    <meta property="og:description" content="Research by Mahmoud Abdelmoneum at MIT on AI agents for science, how neural networks learn, and single-cell approaches to biology and neuroscience.">
     <meta property="og:url" content="https://mabdel-03.github.io/personal-website/">
     <meta property="og:image" content="https://mabdel-03.github.io/personal-website/profile-photo.jpg">
     <meta property="og:image:alt" content="Portrait of Mahmoud Abdelmoneum">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mahmoud Abdelmoneum | MIT MEng | AI &amp; Neuroscience">
-    <meta name="twitter:description" content="MIT Master of Engineering student studying Computer Science and Neuroscience, interested in AI for science and neuroscience-inspired AI.">
+    <meta name="twitter:title" content="Mahmoud Abdelmoneum | AI, Learning Theory &amp; Computational Biology">
+    <meta name="twitter:description" content="Research by Mahmoud Abdelmoneum at MIT on AI agents for science, how neural networks learn, and single-cell approaches to biology and neuroscience.">
     <meta name="twitter:image" content="https://mabdel-03.github.io/personal-website/profile-photo.jpg">
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
@@ -44,6 +44,9 @@
                 "Machine learning for science",
                 "Neuroscience-inspired artificial intelligence",
                 "Deep learning",
+                "Single-cell analysis",
+                "AI agents for scientific research",
+                "Statistical learning theory",
                 "Biological signal processing",
                 "Personalized medicine"
             ],
@@ -57,247 +60,205 @@
 </head>
 
 <body>
-    <canvas class="neural-field" id="neural-field" aria-hidden="true"></canvas>
-    <a class="skip-link" href="#about">Skip to main content</a>
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <nav class="navbar" aria-label="Primary navigation">
-        <div class="nav-container">
-            <a class="nav-logo" href="#home" aria-label="Mahmoud Abdelmoneum home">M.A.</a>
-            <ul class="nav-menu" id="primary-nav">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                <li><a href="#coursework" class="nav-link">Coursework</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="#work">Interests</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="nav-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav" type="button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <p class="eyebrow">MIT EECS + Brain and Cognitive Sciences</p>
-                    <h1>Mahmoud Abdelmoneum</h1>
-                    <p class="hero-lede">
-                        Master of Engineering student studying Computer Science and Neuroscience, exploring artificial and biological intelligence, and how AI can be used to accelerate scientific discovery.
-                    </p>
-                    <p class="hero-summary">
-                        I am interested in broadly understanding intelligence, including understanding human intelligence across Marr's Levels Analysis. I am interested in human intelligence as a means of developing better AI, and I am interested in developing better AI as a
-                        means to accelerate scientific discovery (and, perhaps subsequently, understanding human intelligence better!).
-                    </p>
-                </div>
-                <div class="hero-side">
-                    <figure class="hero-portrait">
-                        <img src="profile-photo.jpg" alt="Portrait of Mahmoud Abdelmoneum" width="1000" height="1000" loading="eager" decoding="async" fetchpriority="high">
-                    </figure>
-                    <aside class="hero-panel" aria-label="Current interests">
-                        <p class="panel-kicker">Current Interests</p>
-                        <ul class="focus-list">
-                            <li>AI for neuroscience and scientific discovery</li>
-                            <li>Computational models of neural and cognitive systems</li>
-                            <li>Biological intelligence as a guide for better AI</li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="hero-actions" aria-label="Primary links">
-                    <a href="mailto:mabdel03@mit.edu">Email</a>
-                    <a href="https://docs.google.com/document/d/1EcYGKKHokweB_0wmnnuizFOa0PxKA5Oc/edit?usp=sharing&amp;ouid=112318663727048852218&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">CV</a>
-                    <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912" target="_blank" rel="noopener">Scholar</a>
+    <main class="container" id="main" tabindex="-1">
+        <section id="home" class="intro" aria-labelledby="name">
+            <div id="about">
+                <p class="affiliation">MIT · Computer Science &amp; Neuroscience</p>
+                <h1 id="name">Mahmoud Abdelmoneum</h1>
+                <p id="research" class="bio">I’m a master’s student at MIT. I build AI agents and foundation models for science, study how neural networks learn and reason, and investigate how social experience relates to the brain.</p>
+                <div class="links">
+                    <a href="https://docs.google.com/document/d/1EcYGKKHokweB_0wmnnuizFOa0PxKA5Oc/edit?usp=sharing&amp;ouid=112318663727048852218&amp;rtpof=true&amp;sd=true">Résumé</a>
+                    <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912">Google Scholar</a>
                 </div>
             </div>
+            <img class="portrait" src="profile-photo.jpg" alt="Mahmoud Abdelmoneum" width="1000" height="1000" decoding="async" fetchpriority="high">
         </section>
 
-        <section id="about" class="about">
-            <div class="container split-section">
-                <div class="section-heading">
-                    <p class="section-label">About</p>
-                    <h2>At the boundary of artificial and biological intelligence.</h2>
-                </div>
-                <div class="about-body">
-                    <div class="copy-stack">
-                        <p>
-                            I am an MIT Master of Engineering student studying Computer Science and Neuroscience. My academic path sits between EECS, Brain and Cognitive Sciences, chemistry, and biology, with a broad interest in how intelligent systems can be understood and engineered.
-                        </p>
-                        <p>
-                            I think about intelligence in both directions: how AI can help us ask sharper questions about neural and biological systems, and how neuroscience can suggest new principles for robust, adaptive, and useful AI.
-                        </p>
-                        <p>
-                            My interests include computational neuroscience, statistical and deep learning methods for biological signal processing, AI for personalized medicine and drug discovery, and the scientific study of cognition and consciousness.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="research" class="research">
-            <div class="container split-section">
-                <div class="section-heading">
-                    <p class="section-label">Research</p>
-                    <h2>Questions I keep returning to.</h2>
-                </div>
-                <div class="research-grid">
-                    <article class="research-card">
-                        <span class="card-index">01</span>
-                        <h3>AI for neuroscience and biology</h3>
-                        <p>
-                            Building and applying computational tools that accelerate our understanding of complex biological and neural data, helping us bridge from the building blocks of life to the complexity of intelligent thought.
-                        </p>
-                    </article>
-                    <article class="research-card">
-                        <span class="card-index">02</span>
-                        <h3>Building Better Artificial Intelligence From Biological Intelligence</h3>
-                        <p>
-                            Studying how ideas from perception, cognition, neural dynamics, and biological adaptation can inform the design of more capable AI systems.
-                        </p>
-                    </article>
-                    <article class="research-card">
-                        <span class="card-index">03</span>
-                        <h3>Deep Learning & Statistical Learning Theory</h3>
-                        <p>
-                            Understanding the principles that underly learning in deep networks through both theoretical and empirical approaches.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="work">
-            <div class="container split-section">
-                <div class="section-heading">
-                    <p class="section-label">Selected work</p>
-                    <h2>Research threads and academic projects.</h2>
-                </div>
-                <div class="work-list">
-                    <article class="work-item">
-                        <div>
-                            <p class="work-type">Research direction</p>
-                            <h3>Environmental conditions and neural dynamics</h3>
+        <section id="work" class="section interests" aria-labelledby="work-title">
+            <h2 id="work-title">Research interests</h2>
+            <section class="interest-area" aria-labelledby="ai-for-science">
+                <h3 id="ai-for-science">AI for Science</h3>
+                <div class="interest-track">
+                    <h4 class="track-title">Agents for Science</h4>
+                    <div class="track-projects">
+                        <div class="research-group">
+                            <h5 class="topic-title">Single Cell Biology</h5>
+                            <article class="project" id="flybase-platform">
+                                <h6 class="project-title"><a href="projects/flybase-platform.html">FlyBase Single Cell Analysis Platform</a></h6>
+                                <p>Tools for exploring and analyzing fruit fly cell atlases with AI agents.</p>
+                            </article>
+                            <article class="project" id="single-cell-agents">
+                                <h6 class="project-title"><a href="projects/single-cell-agents.html">SCAPE: Single-Cell Analysis Proficiency Exam</a></h6>
+                                <p>An evaluation of the decisions agents make when analyzing single-cell data.</p>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=licXCh3QRs">Work presented at the ML4Molecules workshop of NeurIPS 2026</a></em></div>
+                            </article>
+                            <article class="project" id="omics-workflows">
+                                <h6 class="project-title"><a href="projects/omics-workflows.html">AutoBio: Evidence-Guided Adaptation of Biological Analysis Workflows</a></h6>
+                                <p>Adapting workflows from earlier studies to identify cell types and quantify proteins.</p>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=uwEOTDQtw2">Work presented at the Agentic AI for Biological Discovery workshop of NeurIPS 2026</a></em></div>
+                            </article>
                         </div>
-                        <p>
-                            Computational approaches to understanding how different environments affect the brain, behavior, and neural population activity.
-                        </p>
-                    </article>
-                    <article class="work-item">
-                        <div>
-                            <p class="work-type">Methodological interest</p>
-                            <h3>Machine learning for biological signal processing</h3>
+                        <div class="research-group">
+                            <h5 class="topic-title">Applied Math / ML Theory</h5>
+                            <article class="project" id="pai-msc">
+                                <h6 class="project-title"><a href="projects/pai-msc.html">pAI/MSc: Automating ML-Theory Research with Humans on the Loop</a></h6>
+                                <p>A system for developing a theory and testing it against experiments.</p>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=stUy1jdrKC">Work presented at the AI for Science workshop of NeurIPS 2026</a></em></div>
+                                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=T0ErkSml8w">Work presented at the Who Verifies the Agents? workshop of NeurIPS 2026</a></em></div>
+                            </article>
                         </div>
-                        <p>
-                            Models for recovering latent structure in biological and neural data, especially where measurement noise and limited labels make inference difficult.
-                        </p>
-                    </article>
-                    <article class="work-item">
-                        <div>
-                            <p class="work-type">Long-term direction</p>
-                            <h3>Representation learning for medicine and discovery</h3>
+                    </div>
+                </div>
+                <div class="interest-track">
+                    <h4 class="track-title">Foundation Models for Science</h4>
+                    <div class="track-projects">
+                        <div class="research-group">
+                            <h5 class="topic-title">Single Cell Foundation Models</h5>
+                            <article class="project" id="fly-atlas">
+                                <h6 class="project-title"><a href="projects/fly-atlas.html">FlyCellWhisperer</a></h6>
+                                <p>A cell–language model for searching fruit fly atlases with biological descriptions.</p>
+                            </article>
                         </div>
-                        <p>
-                            Deep learning systems for personalized therapeutics, molecular representation, and scientific workflows that connect data to actionable hypotheses.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="teaching" class="teaching">
-            <div class="container split-section">
-                <div class="section-heading">
-                    <p class="section-label">Teaching</p>
-                    <h2>Teaching, tutoring, and mentoring.</h2>
-                </div>
-                <div class="timeline-list">
-                    <article class="timeline-item">
-                        <p class="timeline-date">Fall 2025</p>
-                        <h3>Teaching Assistant, 6.7960 Deep Learning</h3>
-                    </article>
-                    <article class="timeline-item">
-                        <p class="timeline-date">2024-2025</p>
-                        <h3>Lab Assistant, 6.3900 Intro to Machine Learning</h3>
-                    </article>
-                    <article class="timeline-item">
-                        <p class="timeline-date">2024-2025</p>
-                        <h3>Departmental tutoring</h3>
-                        <p>
-                            Biology tutor for introductory biology, genetics, and biochemistry; HKN EECS tutor for machine learning, programming, mathematics for computer science, and algorithms.
-                        </p>
-                    </article>
-                    <article class="timeline-item">
-                        <p class="timeline-date">Winter 2024-2025</p>
-                        <h3>MIT MISTI Global Teaching Labs</h3>
-                        <p>Machine learning instructor in Morocco.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="coursework" class="coursework">
-            <div class="container split-section">
-                <div class="section-heading">
-                    <p class="section-label">Selected coursework</p>
-                    <h2>Coursework shaping my research lens.</h2>
-                </div>
-                <div class="course-grid">
-                    <article class="course-group">
-                        <h3>AI, ML, and computation</h3>
-                        <p>Deep Learning, Intro to Machine Learning, Quantitative NLP, Multiagent Learning, Statistical Learning Theory, Inference and Information, Algorithms.</p>
-                    </article>
-                    <article class="course-group">
-                        <h3>Neuroscience and cognition</h3>
-                        <p>Computational Cognitive Science, Systems Neuroscience Laboratory, Genetic Engineering for Neuroscience and Biotechnology, Cellular and Molecular Neurobiology.</p>
-                    </article>
-                    <article class="course-group">
-                        <h3>Mathematics and statistics</h3>
-                        <p>Real Analysis, Probability and Random Variables, Differential Equations, Statistics, Computation, and Applications, Mathematics for Computer Science.</p>
-                    </article>
-                    <article class="course-group">
-                        <h3>Biology and chemistry</h3>
-                        <p>Fundamentals of Chemical Biology, General Biochemistry, Genetics, Organic Chemistry, Experimental Biology, Thermodynamics and Kinetics.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container split-section">
-                <div class="section-heading">
-                    <p class="section-label">Contact</p>
-                    <h2>Open to research conversations and collaborations.</h2>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <p class="contact-label">Email</p>
-                        <a class="email" href="mailto:mabdel03@mit.edu">mabdel03@mit.edu</a>
-                    </div>
-                    <div class="contact-card">
-                        <p class="contact-label">Institution</p>
-                        <p>Massachusetts Institute of Technology<br>Cambridge, MA</p>
-                    </div>
-                    <div class="contact-card link-card">
-                        <p class="contact-label">Links</p>
-                        <a href="https://docs.google.com/document/d/1EcYGKKHokweB_0wmnnuizFOa0PxKA5Oc/edit?usp=sharing&amp;ouid=112318663727048852218&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">CV</a>
-                        <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="https://github.com/Mabdel-03" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=Mj6_mHsAAAAJ&amp;hl=en&amp;inst=4757196112871156912" target="_blank" rel="noopener">Google Scholar</a>
+                        <div class="research-group">
+                            <h5 class="topic-title">Biological Reasoning Models</h5>
+                            <article class="project" id="biological-reasoning">
+                                <h6 class="project-title"><a href="projects/biological-reasoning.html">Measuring Evidence Use in Biological Reasoning Models</a></h6>
+                                <p>Testing how language models use molecular evidence to make a biological prediction.</p>
+                            </article>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section class="interest-area" aria-labelledby="pure-ai">
+                <h3 id="pure-ai">Pure AI</h3>
+                <div class="interest-track">
+                    <h4 class="track-title">Agents</h4>
+                    <div class="track-projects">
+                        <article class="project" id="reasoning-budget">
+                            <h5 class="project-title"><a href="projects/reasoning-budget.html">Regime-Dependent Inference-Time Compute Allocation</a></h5>
+                            <p>When should a model reason longer, revise an answer, or sample another one?</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="interest-track">
+                    <h4 class="track-title">Deep Learning</h4>
+                    <div class="track-projects">
+                        <article class="project" id="muon">
+                            <h5 class="project-title"><a href="projects/muon.html">The Spectral Dynamics and Noise Geometry of Muon</a></h5>
+                            <p>How an optimizer changes the spectrum of a network’s learned weights.</p>
+                            <a class="paper-link" href="https://arxiv.org/abs/2606.08388">arXiv preprint</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="interest-area" aria-labelledby="neuroscience">
+                <h3 id="neuroscience">Cellular &amp; Molecular Neuroscience</h3>
+                <div class="interest-track">
+                    <h4 class="track-title">ACE Analysis · RNA-seq + Behavior</h4>
+                    <div class="track-projects">
+                        <article class="project" id="childhood-adversity-expression">
+                            <h5 class="project-title"><a href="projects/childhood-adversity-expression.html">Cell-Type-Specific Transcriptomic Effects of Adverse Childhood Experiences in the Human Prefrontal Cortex</a></h5>
+                            <p>How adverse childhood experiences relate to gene expression in the aging brain, alongside a study of early adversity and mouse behavior.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="interest-track">
+                    <h4 class="track-title">SI Analysis · MRI + Behavior</h4>
+                    <div class="track-projects">
+                        <article class="project" id="brain-gene-expression">
+                            <h5 class="project-title"><a href="projects/brain-gene-expression.html">The Lonely Mind: An MRI Investigation of the Effects of Social Isolation on the Brain</a></h5>
+                            <p>Human brain imaging and a complementary study of mouse behavior after social isolation.</p>
+                            <a class="paper-link" href="https://superurop.mit.edu/wp-content/uploads/2026/03/RESEARCH-GUIDE_2024-2025.pdf#page=31">Photo of the MIT poster</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="interest-track">
+                    <h4 class="track-title">SI Analysis · Genetics</h4>
+                    <div class="track-projects">
+                        <article class="project" id="social-isolation-genetics">
+                            <h5 class="project-title"><a href="projects/social-isolation-genetics.html">Cellular Etiology of Social Isolation Traits</a></h5>
+                            <p>Using UK Biobank data to study genetic associations with social isolation and loneliness.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="other-work" class="section other-work" aria-labelledby="other-title">
+            <h2 id="other-title">Other selected work</h2>
+            <article class="project" id="scientific-agent-survey">
+                <h3 class="project-title"><a href="projects/scientific-agent-survey.html">Agent Systems for Academic Research Automation</a></h3>
+                <div class="venue-credit"><em><a href="https://openreview.net/forum?id=iAfYyiCzev">Work presented at the AI for Science workshop of ICML 2026</a></em></div>
+            </article>
+            <article class="project" id="early-environments">
+                <h3 class="project-title"><a href="projects/early-environments.html">How does early housing shape mouse behavior?</a></h3>
+                <p>Behavioral data and code for the mouse studies.</p>
+            </article>
+            <h3 class="other-field">OHSU · Ophthalmology</h3>
+            <article class="project" id="mobile-vision">
+                <h4 class="project-title"><a href="projects/near-vision.html">Assessing near vision in presbyopia</a></h4>
+                <p>A mobile research prototype for assessing near vision.</p>
+            </article>
+            <article class="project" id="childhood-vision">
+                <h4 class="project-title"><a href="projects/childhood-vision.html">Screening for myopia in childhood</a></h4>
+                <p>A mobile research prototype for screening for early signs of childhood myopia.</p>
+            </article>
+        </section>
+
+        <section id="teaching" class="section" aria-labelledby="teaching-title">
+            <h2 id="teaching-title">Teaching</h2>
+            <ul class="appointments">
+                <li><span>Statistical Learning Theory and Applications</span><span>TA · MIT 9.520 / 6.7910 · Fall 2026</span></li>
+                <li><span>Deep Learning</span><span>TA · MIT 6.7960 · Fall 2025</span></li>
+            </ul>
+            <details>
+                <summary>Earlier teaching</summary>
+                <ul class="earlier">
+                    <li>MIT 6.3900 Introduction to Machine Learning · Lab assistant, 2024–25</li>
+                    <li>MIT MISTI Global Teaching Labs · Machine learning instructor in Morocco, winter 2024–25</li>
+                    <li>MIT Biology and HKN EECS · Departmental tutor, 2024–25</li>
+                </ul>
+            </details>
+            <details id="coursework">
+                <summary>Selected coursework</summary>
+                <dl class="courses">
+                    <dt>AI and computation</dt>
+                    <dd>Deep Learning, Quantitative NLP, Multiagent Learning, Statistical Learning Theory, Inference and Information, Introduction to Machine Learning, Algorithms.</dd>
+                    <dt>Neuroscience and cognition</dt>
+                    <dd>Computational Cognitive Science, Systems Neuroscience Laboratory, Genetic Engineering for Neuroscience and Biotechnology, Cellular and Molecular Neurobiology.</dd>
+                    <dt>Mathematics and statistics</dt>
+                    <dd>Real Analysis, Probability and Random Variables, Differential Equations, Statistics, Computation, and Applications, Mathematics for Computer Science.</dd>
+                    <dt>Biology and chemistry</dt>
+                    <dd>Fundamentals of Chemical Biology, General Biochemistry, Genetics, Organic Chemistry, Experimental Biology, Thermodynamics and Kinetics.</dd>
+                </dl>
+            </details>
+        </section>
+
+        <section id="contact" class="section contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <div class="links">
+                <a href="mailto:mabdel03@mit.edu">mabdel03@mit.edu</a>
+                <a href="https://github.com/Mabdel-03">GitHub</a>
+                <a href="https://www.linkedin.com/in/mahmoud-abdelmoneum-49b589187/">LinkedIn</a>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year">2026</span> Mahmoud Abdelmoneum</p>
-        </div>
-    </footer>
-
     <script src="script.js"></script>
+    <script src="neural-field.js"></script>
 </body>
-
 </html>
