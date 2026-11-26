@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing a research hypothesis with pAI/MSc | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="A researcher supplies a hypothesis, and a team of software agents develops the theory and experiments in parallel.">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/pai-msc.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Testing a research hypothesis with pAI/MSc">
+    <meta property="og:description" content="A researcher supplies a hypothesis, and a team of software agents develops the theory and experiments in parallel.">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/pai-msc.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Selected work</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">AI for scientific research</span>
+                <h1>Testing a research hypothesis with pAI/MSc</h1>
+                <div class="study-deck">A researcher supplies a hypothesis, and a team of software agents develops the theory and experiments in parallel.</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <picture>
+                        <source height="684" media="(max-width: 38rem)" srcset="figures/pai-msc-workflow-mobile.webp" width="800"/>
+                        <img alt="A research plan branches into theory and experiment tracks. Derivations, assumptions, code and measurements meet at evidence review, before the manuscript and run record." decoding="async" height="512" src="figures/pai-msc-workflow.webp" style="display:block;width:100%;height:auto" width="1680"/>
+                    </picture>
+                </div>
+                <figcaption>After planning, two tracks develop independently. A review stage compares their evidence and can request follow-up work before drafting.</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>A machine learning hypothesis often needs two kinds of work before it can become a paper. Someone has to say exactly what the mathematics predicts, and someone has to design an experiment that could reveal a mistake. We built pAI/MSc to let a researcher steer both lines of inquiry and inspect the evidence behind the draft.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>The AI Scientist showed that agents could run machine learning experiments and write up their findings. Data-to-paper made the route from an analysis to a sentence in a manuscript inspectable. We drew on both ideas to address a recurring problem in theory work. A derivation and an experiment can each look convincing while answering slightly different questions.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we delivered</h2>
+                    <p>We released an open-source system that writes a research plan, runs separate theory and experiment tracks, and checks where their findings agree. Researchers can inspect the code, assumptions and logs, redirect the work at checkpoints, and review the resulting manuscript. The team used its study of the Muon optimizer as a test case while developing the system.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li><a href="https://arxiv.org/abs/2604.20622">Technical report · arXiv</a></li>
+                    <li><a href="https://github.com/PoggioAI/PoggioAI_MSc">Open-source implementation · GitHub</a></li>
+                    <li><a href="muon.html">Case study · What Muon changes during training</a></li>
+                    <li><a href="https://arxiv.org/abs/2408.06292">Prior work · The AI Scientist</a></li>
+                    <li><a href="https://doi.org/10.1056/AIoa2400555">Prior work · Data-to-paper</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#pai-msc">Back to selected work</a>
+            <a rel="next" href="scientific-agent-survey.html">Next · How to evaluate a scientific agent</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>

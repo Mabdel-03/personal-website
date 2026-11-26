@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Muon changes during training | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="We studied when the way Muon distributes its updates changes the solution a network learns.">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/muon.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What Muon changes during training">
+    <meta property="og:description" content="We studied when the way Muon distributes its updates changes the solution a network learns.">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/muon.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Selected work</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">Optimization theory</span>
+                <h1>What Muon changes during training</h1>
+                <div class="study-deck">We studied when the way Muon distributes its updates changes the solution a network learns.</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <picture>
+                        <source height="472" media="(max-width: 38rem)" srcset="figures/muon-effective-rank-mobile.webp" width="800"/>
+                        <img alt="Horizontal comparison of attention input projection effective rank after training: Muon, 58.0; AdamW, 22.2. The dimensionless scale starts at zero." decoding="async" height="520" src="figures/muon-effective-rank.webp" style="display:block;width:100%;height:auto" width="1680"/>
+                    </picture>
+                </div>
+                <figcaption>In a 124-million-parameter NanoGPT trained on OpenWebText for 5,000 steps, one run per optimizer gave effective ranks of 58.0 and 22.2. A higher value means the weight matrix spreads more of its strength across multiple directions.</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>Many different weight matrices can fit the same training data. An optimizer helps decide which one a network reaches. Muon gives its update the same magnitude along each active singular direction. We asked when that choice distributes the learned weights across more directions, and whether it helps a model generalize.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>Muon was introduced to train the hidden layers of neural networks. Its matrix update differs from AdamW, which adapts the step for each parameter and applies weight decay separately. We began with matrix regression, where several solutions fit the observations exactly, and used it to isolate what each update does to the shape of the learned weights.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we found</h2>
+                    <p>Our preprint derives a condition for when the weight spectrum flattens in a simplified regression model. Muon also achieved lower validation loss than AdamW on a small language model, while AdamW performed better on a matched vision transformer. This study was a test case for pAI/MSc. The system drafted the paper, and the authors inspected the mathematical claims and experiment logs.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li><a href="https://arxiv.org/abs/2606.08388">Research preprint · arXiv</a></li>
+                    <li><a href="https://github.com/KellerJordan/Muon">Original optimizer · Muon</a></li>
+                    <li><a href="pai-msc.html">Project · Testing a research hypothesis with pAI/MSc</a></li>
+                    <li><a href="https://arxiv.org/abs/1711.05101">Prior work · AdamW</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#muon">Back to selected work</a>
+            <a rel="next" href="brain-gene-expression.html">Next · Social isolation and the brain’s frontal connections</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>

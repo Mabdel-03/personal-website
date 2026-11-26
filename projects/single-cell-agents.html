@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluating single-cell analysis agents | Mahmoud Abdelmoneum</title>
+    <meta name="description" content="On a mouse cortex task, 47 of 50 agent runs passed the evaluation checks. All 47 received the same outcome score.">
+    <link rel="canonical" href="https://mabdel-03.github.io/personal-website/projects/single-cell-agents.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Evaluating single-cell analysis agents">
+    <meta property="og:description" content="On a mouse cortex task, 47 of 50 agent runs passed the evaluation checks. All 47 received the same outcome score.">
+    <meta property="og:url" content="https://mabdel-03.github.io/personal-website/projects/single-cell-agents.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23060607'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23f4f4f5'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="studies.css">
+</head>
+<body class="study-page">
+    <canvas id="neural-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to project</a>
+    <header class="masthead">
+        <nav class="container primary-nav" aria-label="Primary navigation">
+            <a class="monogram" href="../index.html#home" aria-label="Mahmoud Abdelmoneum, home">M.A.</a>
+            <ul>
+                <li><a href="../index.html#work">Selected work</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+        <article>
+            <header class="study-heading">
+                <span class="study-field">Scientific AI</span>
+                <h1>Evaluating single-cell analysis agents</h1>
+                <div class="study-deck">On a mouse cortex task, 47 of 50 agent runs passed the evaluation checks. All 47 received the same outcome score.</div>
+            </header>
+            <figure class="project-figure">
+                <div class="figure-canvas">
+                    <picture>
+                        <source media="(max-width: 38rem)" srcset="figures/single-cell-agents-mobile.webp" width="720" height="1096">
+                        <img src="figures/single-cell-agents.webp" width="1600" height="690" alt="Blood-cell annotation had 29 of 50 runs certified and 27 distinct outcome scores. Pancreas integration had 43 of 50 and 12 scores. Mouse cortex differential expression had 47 of 50 and one score.">
+                    </picture>
+                </div>
+                <figcaption>Each dot represents one scheduled run. Certified runs completed the task and passed the integrity, evaluator, output, and reference checks. The distinct-score count is the number of different final task scores among certified runs (paper, Table 5).</figcaption>
+            </figure>
+            <div class="study-story">
+                <section aria-labelledby="motivation-heading">
+                    <h2 id="motivation-heading">Motivation</h2>
+                    <p>Two scientists can analyze the same single-cell dataset in different ways and reach defensible conclusions. An AI agent faces the same choices about which cells to keep, how to compare samples, and how to name cell types. We wanted to know whether an evaluation could tell when those choices changed the biological result.</p>
+                </section>
+                <section aria-labelledby="prior-heading">
+                    <h2 id="prior-heading">Prior work</h2>
+                    <p>Open Problems in Single-Cell Analysis established common datasets and quantitative tasks. scBench took this further for agents by checking whether each analysis reaches a specified endpoint. Our framework, the Single-Cell Analysis Proficiency Exam (SCAPE), pairs checks on individual analysis steps with a score for the scientific task. It also tracks whether a run produced the outputs needed for a fair comparison.</p>
+                </section>
+                <section aria-labelledby="results-heading">
+                    <h2 id="results-heading">What we found</h2>
+                    <p>We audited ten models across three tasks, with five runs per model on each task. Of 150 scheduled runs, 119 finished and passed the checks. Among those runs, the blood-cell task yielded 27 distinct outcome scores, while the mouse cortex task yielded just one. The cortex score gave us no way to distinguish those runs. The ML4Molecules workshop at NeurIPS 2026 accepted this work as a poster.</p>
+                </section>
+            </div>
+            <section class="study-sources" aria-labelledby="sources-heading">
+                <h2 id="sources-heading">Sources</h2>
+                <ul>
+                    <li><a href="https://openreview.net/forum?id=licXCh3QRs">SCAPE workshop paper · OpenReview</a></li>
+                    <li><a href="https://moleculediscovery.github.io/workshop2026/accepted-contributions/">Accepted contributions · ML4Molecules at NeurIPS 2026</a></li>
+                    <li><a href="https://www.nature.com/articles/s41587-025-02694-w">Open Problems in Single-Cell Analysis · Nature Biotechnology</a></li>
+                    <li><a href="https://arxiv.org/abs/2602.09063">scBench · arXiv preprint</a></li>
+                </ul>
+            </section>
+        </article>
+        <nav class="study-footer" aria-label="Project navigation">
+            <a href="../index.html#single-cell-agents">Back to selected work</a>
+            <a rel="next" href="omics-workflows.html">Next · Choosing a workflow for a new dataset</a>
+        </nav>
+    </main>
+    <script src="../neural-field.js"></script>
+</body>
+</html>
